@@ -12,7 +12,8 @@
     "react-dom": "16.14.0",
     "react-scripts": "5.0.0",
     "sass": "^1.50.0",
-    "webpack-clean": "^1.2.5"
+    "webpack-clean": "^1.2.5",
+    "async": ">=3.2.2"
   },
   "scripts": {
     "start": "set PORT=8000 && react-scripts start",

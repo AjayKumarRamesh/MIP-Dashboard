@@ -145,7 +145,7 @@ const App = () => (
 						<SideNav aria-label="Side navigation" isFixedNav={true} expanded={isSideNavExpanded}>
 							<SideNavItems>
 								<SideNavMenu renderIcon={Fade16} title="Dundas">
-									<SideNavMenuItem href="#" onClick={loadDashboard}>
+									<SideNavMenuItem id="operDash" href="#" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 										Operational Dashboard
 									</SideNavMenuItem>
 									<SideNavMenuItem href="#">
@@ -182,11 +182,12 @@ const App = () => (
 	</div>
 );
 
-function loadDashboard() {
+function loadDashboard(id, url) {
 	document.getElementById("divId").innerHTML = '<iframe id="i_frame" src="https://ibm.biz/E2E_Monitoring" style="border: 0pt none; width: 100%; height: 100%;" scrolling="no"></iframe>';
 	document.getElementById("divId").style.position = 'absolute';
 	document.getElementById("divId").style.width = '100%';
 	document.getElementById("divId").style.height = '100%';
+	document.getElementById(id).ariaCurrent = 'page';
 }
 
 render(<App />, document.getElementById("root"));
