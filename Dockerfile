@@ -2,10 +2,11 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY package.json ./
+RUN chown -R node.node /app/node_modules
+
+#COPY package.json ./
+COPY . .
 
 RUN npm install
-
-COPY . .
 
 CMD ["npm", "start"]
