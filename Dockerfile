@@ -5,7 +5,7 @@ WORKDIR /app
 #COPY package.json ./
 COPY . .
 
-RUN npm install -g npm@8.7.0
+RUN npm install
 
 RUN chown -R node.node /app/node_modules
 
