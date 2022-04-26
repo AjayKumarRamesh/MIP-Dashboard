@@ -1,14 +1,14 @@
 FROM node:latest
 
-WORKDIR /app
+WORKDIR /temp
 
 #COPY package.json ./
 COPY . .
 
-RUN npm install -g npm@8.7.0
+RUN npm install
 
-#RUN chown -R node.node /app/node_modules
+RUN chown -R node.node /temp/node_modules
 
-#RUN chmod -R 777 /app
+RUN chmod -R 777 /temp
 
 CMD ["npm", "start"]
