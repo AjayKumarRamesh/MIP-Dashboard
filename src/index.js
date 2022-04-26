@@ -39,6 +39,7 @@ import "./style.css";
 	}
 })();
 */
+
 const StoryContent = () => {
 	const content = (
 		<div id="divId" className="">
