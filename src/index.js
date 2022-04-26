@@ -19,10 +19,25 @@ import {
 	SideNavMenuItem
 } from "carbon-components-react/lib/components/UIShell";
 
+import AppID from "ibmcloud-appid-js";
+import config from "./config.json";
 
 import "./style.css";
 
 //import "./index.scss";
+
+const appID = new AppID();
+
+(async () => {
+	try {
+		await appID.init(config);
+		const tokens = await appID.signin();
+		await appID.getUserInfo(tokens.accessToken);
+		render(<App />, document.getElementById("root"));
+	} catch (e) {
+		console.log(e);
+	}
+})();
 
 const StoryContent = () => {
 	const content = (
@@ -190,4 +205,4 @@ function loadDashboard(id, url) {
 	document.getElementById(id).ariaCurrent = 'page';
 }
 
-render(<App />, document.getElementById("root"));
+//render(<App />, document.getElementById("root"));
