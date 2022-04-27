@@ -20,6 +20,7 @@ import {
 } from "carbon-components-react/lib/components/UIShell";
 
 import AppID from "ibmcloud-appid-js";
+import config from "./config.json";
 
 import "./style.css";
 
@@ -29,10 +30,7 @@ const appID = new AppID();
 
 (async () => {
 	try {
-		await appID.init({
-	        clientId: '723ca7e5-6616-42e2-b9f5-dffb907b0f14',
-	        discoveryEndpoint: 'https://us-south.appid.cloud.ibm.com/oauth/v4/ea8bdbb4-60fe-4b7b-8306-e60f9c6174d8/.well-known/openid-configuration'
-	      });
+		await appID.init(config);
 		const tokens = await appID.signin();
 		await appID.getUserInfo(tokens.accessToken);
 		render(<App />, document.getElementById("root"));
