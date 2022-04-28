@@ -98,7 +98,7 @@ app.get('/', (req, res) => {
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <title>carbon-web-components example with React SSR</title>
+          <title>MIP Dashboard</title>
           <link id="external-css" rel="stylesheet" type="text/css" href="https://unpkg.com/carbon-components/css/carbon-components.min.css" media="all">
         </head>
         <body>
