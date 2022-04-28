@@ -1,0 +1,8 @@
+{
+  "clientId": "638d1f7d-aeac-4000-885a-eaa401622a19",
+  "oauthServerUrl": "https://us-south.appid.cloud.ibm.com/oauth/v4/a833f67a-3f41-4cba-a364-9a983f2cbe5d",
+  "profilesUrl": "https://us-south.appid.cloud.ibm.com",
+  "secret": "MTBkMDQ4NjMtODRlNS00NTZkLWFhODgtMTNkNzMzYjI2NTdl",
+  "tenantId": "a833f67a-3f41-4cba-a364-9a983f2cbe5d",
+  "redirectUri": "https://mip.dal1a.cirrus.ibm.com/ibm/cloud/appid/callback"
+}
