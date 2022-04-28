@@ -1,8 +1,8 @@
 {
-  "name": "carbon-web-components-react-ssr-getting-started",
+  "name": "MIP Dashboard",
   "version": "0.1.0",
   "private": true,
-  "description": "Sample project for getting started with the Web Components from the Carbon Design System with React SSR.",
+  "description": "MIP Dashboard application with the Web Components from the Carbon Design System with React SSR.",
   "license": "Apache-2",
   "scripts": {
     "build:views": "babel src/views -d views --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs",
