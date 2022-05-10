@@ -85,7 +85,7 @@ function getAppIDConfig() {
 
 app.use(webpackDevMiddleware(compiler, { index: false, serverSideRender: true }));
 
-app.get('/', (req, res) => {
+app.get('/mipdashboard', (req, res) => {
   const { devMiddleware } = res.locals.webpack;
   const { stats } = devMiddleware;
   const { assetsByChunkName } = stats.toJson();
