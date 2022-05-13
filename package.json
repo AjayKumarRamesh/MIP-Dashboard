@@ -5,7 +5,7 @@
   "description": "MIP Dashboard application with the Web Components from the Carbon Design System with React SSR.",
   "license": "Apache-2",
   "scripts": {
-    "build:views": "babel src/views -d views --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs",
+    "build:views": "babel src/views -d mipdashboard --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs",
     "prestart": "npm run build:views",
     "start": "node app.js"
   },

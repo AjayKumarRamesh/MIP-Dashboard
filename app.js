@@ -54,38 +54,17 @@ passport.deserializeUser((obj, cb) => cb(null, obj));
 app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME, {failureRedirect: '/error'}));
 
 // Protect everything under /
-app.use("/", passport.authenticate(WebAppStrategy.STRATEGY_NAME));
+app.use("/mipdashboard", passport.authenticate(WebAppStrategy.STRATEGY_NAME));
 
-//Serves the identity token payload
-app.get("/api/idPayload", (req, res) => {
-	res.send(req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload);
-});
+// This will statically serve pages:
+//app.use(express.static("public"));
 
-app.get('/error', (req, res) => {
-	res.send('Authentication Error');
-});
-
-function getAppIDConfig() {
-	let config;
-	
-	try {
-		// if running locally we'll have the local config file
-		config = require('./localdev-config.json');
-	} catch (e) {
-		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
-			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
-			config.redirectUri = process.env.redirectUri;
-		} else { // running on CF
-			let vcapApplication = JSON.parse(process.env["VCAP_APPLICATION"]);
-			return {"redirectUri" : "https://" + vcapApplication["application_uris"][0] + CALLBACK_URL};
-		}
-	}
-	return config;
-}
+// // This will statically serve the protected page (after authentication, since /protected is a protected area):
+//app.use('/views', express.static("App"));
 
 app.use(webpackDevMiddleware(compiler, { index: false, serverSideRender: true }));
 
-app.get('/mipdashboard', (req, res) => {
+app.use('/mipdashboard', (req, res) => {
   const { devMiddleware } = res.locals.webpack;
   const { stats } = devMiddleware;
   const { assetsByChunkName } = stats.toJson();
@@ -113,6 +92,33 @@ app.get('/mipdashboard', (req, res) => {
   );
   res.end();
 });
+
+//Serves the identity token payload
+app.get("/api/idPayload", (req, res) => {
+	res.send(req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload);
+});
+
+app.get('/error', (req, res) => {
+	res.send('Authentication Error');
+});
+
+function getAppIDConfig() {
+	let config;
+	
+	try {
+		// if running locally we'll have the local config file
+		config = require('./localdev-config_local.json');
+	} catch (e) {
+		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
+			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
+			config.redirectUri = process.env.redirectUri;
+		} else { // running on CF
+			let vcapApplication = JSON.parse(process.env["VCAP_APPLICATION"]);
+			return {"redirectUri" : "https://" + vcapApplication["application_uris"][0] + CALLBACK_URL};
+		}
+	}
+	return config;
+}
 
 const PORT = process.env.PORT || 8080;
 
