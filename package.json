@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "description": "MIP Dashboard application with the Web Components from the Carbon Design System with React SSR.",
-  "homepage": "/mipdashboard",
   "license": "Apache-2",
   "scripts": {
     "build:views": "babel src/views -d mipdashboard --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs",
