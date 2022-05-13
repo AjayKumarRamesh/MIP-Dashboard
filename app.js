@@ -24,7 +24,7 @@ const compiler = webpack(require('./webpack.config'));
 
 const WebAppStrategy = appID.WebAppStrategy;
 
-const CALLBACK_URL = "/ibm/cloud/appid/callback";
+const CALLBACK_URL = "/mipdashboard/ibm/cloud/appid/callback";
 
 app.use(session({
 	secret: "123456",
