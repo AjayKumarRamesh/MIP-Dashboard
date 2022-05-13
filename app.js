@@ -17,7 +17,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server.js');
-const { default: App } = require('./views/App.js');
+const { default: App } = require('./mipdashboard/App.js');
 
 const app = express();
 const compiler = webpack(require('./webpack.config'));
