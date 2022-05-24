@@ -148,7 +148,7 @@ const App = () => (
 						<SideNav aria-label="Side navigation" isFixedNav={true} expanded={isSideNavExpanded}>
 							<SideNavItems>
 								<SideNavMenu renderIcon={Fade16} title="Dundas">
-									<SideNavMenuItem id="operDash" href="#" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
+									<SideNavMenuItem id="operDash" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 										Operational Dashboard
 									</SideNavMenuItem>
 									<SideNavMenuItem href="#">

@@ -115,7 +115,6 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     title: "Dundas"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     id: "operDash",
-    href: "#",
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
   }, "Operational Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     href: "#"
