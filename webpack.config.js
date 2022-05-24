@@ -7,35 +7,42 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const path = require('path');
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-react'],
-            },
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
+	entry: './src/index.js',
+	output: {
+		filename: 'main.js',
+		path: path.resolve(__dirname, 'mipdashboard'),
+		publicPath: '/mipdashboard',
+	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							presets: ['@babel/preset-react'],
+						},
+					},
+				],
+			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader',
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 2,
+							sourceMap: true,
+						},
+					},
+				],
+			},
+		],
+	},
 };

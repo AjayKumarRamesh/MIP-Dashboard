@@ -51,7 +51,7 @@ passport.deserializeUser((obj, cb) => cb(null, obj));
 // 1. the original URL of the request that triggered authentication, as persisted in HTTP session under WebAppStrategy.ORIGINAL_URL key.
 // 2. successRedirect as specified in passport.authenticate(name, {successRedirect: "...."}) invocation
 // 3. application root ("/")
-app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME, {failureRedirect: '/error'}));
+app.get(CALLBACK_URL, passport.authenticate(WebAppStrategy.STRATEGY_NAME, { failureRedirect: '/error' }));
 
 // Protect everything under /
 app.use("/mipdashboard", passport.authenticate(WebAppStrategy.STRATEGY_NAME));
@@ -65,13 +65,14 @@ app.use("/mipdashboard", passport.authenticate(WebAppStrategy.STRATEGY_NAME));
 app.use(webpackDevMiddleware(compiler, { index: false, serverSideRender: true }));
 
 app.use('/mipdashboard', (req, res) => {
-  const { devMiddleware } = res.locals.webpack;
-  const { stats } = devMiddleware;
-  const { assetsByChunkName } = stats.toJson();
-  res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Cache-Control', 'public, max-age=0');
-  res.send(
-    `
+	const { devMiddleware } = res.locals.webpack;
+	const { stats } = devMiddleware;
+	const { assetsByChunkName } = stats.toJson();
+	
+	res.setHeader('Content-Type', 'text/html');
+	res.setHeader('Cache-Control', 'public, max-age=0');
+	res.send(
+		`
       <!DOCTYPE html>
       <html lang="en">
         <head>
@@ -85,12 +86,12 @@ app.use('/mipdashboard', (req, res) => {
             You need to enable JavaScript to run this app.
           </noscript>
           <div id="root">${ReactDOMServer.renderToString(React.createElement(App))}</div>
-          <script src="${assetsByChunkName.main}"></script>
+          <script src="./mipdashboard/${assetsByChunkName.main}"></script>
         </body>
       </html>
     `
-  );
-  res.end();
+	);
+	res.end();
 });
 
 //Serves the identity token payload
@@ -104,17 +105,17 @@ app.get('/error', (req, res) => {
 
 function getAppIDConfig() {
 	let config;
-	
+
 	try {
 		// if running locally we'll have the local config file
-		config = require('./localdev-config.json');
+		config = require('./localdev-config_local.json');
 	} catch (e) {
 		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
 			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
 			config.redirectUri = process.env.redirectUri;
 		} else { // running on CF
 			let vcapApplication = JSON.parse(process.env["VCAP_APPLICATION"]);
-			return {"redirectUri" : "https://" + vcapApplication["application_uris"][0] + CALLBACK_URL};
+			return { "redirectUri": "https://" + vcapApplication["application_uris"][0] + CALLBACK_URL };
 		}
 	}
 	return config;
@@ -123,5 +124,5 @@ function getAppIDConfig() {
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}.`); // eslint-disable-line no-console
+	console.log(`Server listening on port ${PORT}.`); // eslint-disable-line no-console
 });
