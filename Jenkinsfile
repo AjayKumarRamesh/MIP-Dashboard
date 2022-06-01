@@ -33,9 +33,17 @@ pipeline{
             }
         }
 
-        // stage ("") {
-
-        // }
+        stage ("Deploy the MIP-Dashboard to dev cluster") {
+            environment {
+                IBMCLOUD_CREDS = credentials('ibm-cloud-cr')
+            }
+            steps {
+                sh('ibmcloud login --apikey ${IBMCLOUD_CREDS_PSW} -r us-south')
+                sh('ibmcloud ks cluster config --cluster map-dal10-16x64-01')
+                sh('kubectl config current-context')
+                sh('kubectl rollout restart deployment mipdashboard -n mipdashboard')
+            } //steps
+        }
 
     }
     
