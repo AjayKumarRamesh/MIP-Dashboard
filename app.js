@@ -68,13 +68,13 @@ app.use('/mipdashboard', (req, res) => {
 	const { devMiddleware } = res.locals.webpack;
 	const { stats } = devMiddleware;
 	const { assetsByChunkName } = stats.toJson();
-	
+
 	res.setHeader('Content-Type', 'text/html');
 	res.setHeader('Cache-Control', 'public, max-age=0');
 	res.send(
 		`
       <!DOCTYPE html>
-      <html lang="en">
+      <html lang="en" style="background-color: lightgray;">
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

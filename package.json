@@ -5,12 +5,14 @@
 	"description": "MIP Dashboard application with the Web Components from the Carbon Design System with React SSR.",
 	"license": "Apache-2",
 	"scripts": {
-		"build:views": "babel src/views -d mipdashboard --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs",
+		"build:views": "babel src/views -d mipdashboard --plugins=@babel/plugin-transform-react-jsx,@babel/plugin-transform-modules-commonjs,babel-plugin-css-modules-transform",
 		"prestart": "npm run build:views",
 		"start": "node app.js"
 	},
 	"dependencies": {
+		"@carbon/grid": "^11.2.0",
 		"@carbon/icons-react": "10.3.0",
+		"@carbon/react": "latest",
 		"carbon-components": "10.3.1",
 		"carbon-components-react": "7.3.1",
 		"carbon-web-components": "^1.19.0",
@@ -18,12 +20,16 @@
 		"ejs": ">=3.1.7",
 		"express": "^4.17.1",
 		"express-session": "^1.17.1",
+		"file-loader": "^6.2.0",
 		"ibmcloud-appid": "^6.1.1",
+		"jquery": "^3.6.0",
 		"jquery.json-viewer": "^1.4.0",
 		"passport": "^0.4.1",
 		"prop-types": "^15.7.0",
 		"react": "^16.12.0",
-		"react-dom": "^16.12.0"
+		"react-dom": "^16.12.0",
+		"sass": "^1.51.0",
+		"url-loader": "^4.1.1"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.0",
@@ -33,11 +39,12 @@
 		"@babel/preset-react": "^7.10.0",
 		"@types/react": "^16.9.0",
 		"babel-loader": "^8.2.0",
-		"node": "^12.16.3",
+		"babel-plugin-css-modules-transform": "^1.6.2",
 		"css-loader": "^5.0.0",
-		"webpack-cli": "^4.9.2",
+		"node": "^12.16.3",
 		"style-loader": "^2.0.0",
 		"webpack": "^4.0.0",
+		"webpack-cli": "^4.9.2",
 		"webpack-dev-middleware": "^4.0.0"
 	}
 }

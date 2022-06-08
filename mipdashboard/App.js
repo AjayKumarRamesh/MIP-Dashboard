@@ -30,12 +30,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const StoryContent = () => {
   const content = /*#__PURE__*/_react.default.createElement("div", {
     id: "divId",
-    className: ""
+    className: "bx--grid"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: ""
-  }, /*#__PURE__*/_react.default.createElement("section", {
-    className: ""
-  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "bx--row"
+  }, /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
       margin: "30px 0",
@@ -68,7 +66,10 @@ const StoryContent = () => {
   }, "The side-nav contains secondary navigation and fits below the header. It can be configured to be either fixed-width or flexible, with only one level of nested items allowed. Both links and category lists can be used in the side-nav and may be mixed together. There are several configurations of the side-nav, but only one configuration should be used per product section. If tabs are needed on a page when using a side-nav, then the tabs are secondary in hierarchy to the side-nav."))));
 
   return /*#__PURE__*/_react.default.createElement(_UIShell.Content, {
-    id: "main-content"
+    id: "main-content",
+    style: {
+      backgroundColor: 'lightgray'
+    }
   }, content);
 };
 
@@ -82,6 +83,45 @@ const Fade16 = () => /*#__PURE__*/_react.default.createElement("svg", {
   d: "M8.24 25.14L7 26.67a14 14 0 0 0 4.18 2.44l.68-1.88a12 12 0 0 1-3.62-2.09zm-4.05-7.07l-2 .35A13.89 13.89 0 0 0 3.86 23l1.73-1a11.9 11.9 0 0 1-1.4-3.93zm7.63-13.31l-.68-1.88A14 14 0 0 0 7 5.33l1.24 1.53a12 12 0 0 1 3.58-2.1zM5.59 10L3.86 9a13.89 13.89 0 0 0-1.64 4.54l2 .35A11.9 11.9 0 0 1 5.59 10zM16 2v2a12 12 0 0 1 0 24v2a14 14 0 0 0 0-28z"
 }));
 
+const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanel",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '153.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Operational Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+})), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Provides visibility into operational and monitoring performance.")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-5"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "related-reports-label"
+}, "Related reports:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  target: "_blank",
+  rel: "noopener noreferrer"
+}, "Paid Media")))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-3"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
 const App = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "container"
 }, /*#__PURE__*/_react.default.createElement(_HeaderContainer.default, {
@@ -89,13 +129,19 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     isSideNavExpanded,
     onClickSideNavExpand
   }) => /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_UIShell.Header, {
-    "aria-label": "IBM Platform Name"
+    "aria-label": "IBM Platform Name",
+    style: {
+      backgroundColor: '#009d9a'
+    }
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SkipToContent, null), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderMenuButton, {
+    style: {
+      backgroundColor: '#009d9a'
+    },
     "aria-label": "Open menu",
     onClick: onClickSideNavExpand,
     isActive: isSideNavExpanded
   }), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderName, {
-    href: "#",
+    href: "/mipdashboard",
     prefix: "IBM"
   }, "DIAMOND"), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalBar, null, /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalAction, {
     "aria-label": "Search",
@@ -108,34 +154,77 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     onClick: () => {}
   }, /*#__PURE__*/_react.default.createElement(_3.default, null))), /*#__PURE__*/_react.default.createElement(_UIShell.SideNav, {
     "aria-label": "Side navigation",
+    className: "app--side-nav app--side-nav--is-open",
     isFixedNav: true,
     expanded: isSideNavExpanded
-  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavItems, null, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
-    renderIcon: Fade16,
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app--side-nav__header"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app--side-nav__header-title"
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    focusable: "false",
+    preserveAspectRatio: "xMidYMid meet",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "currentColor",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 32 32",
+    "aria-hidden": "true",
+    className: "app--side-nav__header-title__icon"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M15 20H17V24H15zM20 18H22V24H20zM10 14H12V24H10z"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"
+  })), "reports")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavItems, {
+    className: "app--side-nav__sections-container"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      fontSize: '1.2rem',
+      marginTop: '10px'
+    }
+  }, "MONITORING"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
+    className: "app--side-nav__menu-item-btn",
     title: "Dundas"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
     id: "operDash",
+    onMouseOut: () => closeQuickView(),
+    onMouseOver: () => openQuickView(),
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
-  }, "Operational Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    href: "#"
-  }, "Additional Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    href: "#"
-  }, "Other Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
-    renderIcon: Fade16,
-    title: "Grafana"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    id: "addiDash"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Additinal Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      fontSize: '1.2rem',
+      marginTop: '10px'
+    }
+  }, "DATABASE"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
+    className: "app--side-nav__menu-item-btn",
+    title: "Cloud"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    href: "#"
-  }, "Operational Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    href: "#"
-  }, "Additional Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    href: "#"
-  }, "Other Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
-    renderIcon: Fade16,
-    href: "#"
-  }, "Some Other Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
-    renderIcon: Fade16,
-    href: "#"
-  }, "Some Other Dashboard 2")))), /*#__PURE__*/_react.default.createElement(StoryContent, null))
+    className: "app--side-nav__menu-item",
+    id: "dbDash"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Cloud DB Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      fontSize: '1.2rem',
+      marginTop: '10px'
+    }
+  }, "GRAFANA"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
+    className: "app--side-nav__menu-item-btn",
+    title: "Coming Soon"
+  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    id: "grafDash"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Grafana Dashboard")))))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null))
 }));
 
 function loadDashboard(id, url) {
@@ -144,6 +233,20 @@ function loadDashboard(id, url) {
   document.getElementById("divId").style.width = '100%';
   document.getElementById("divId").style.height = '100%';
   document.getElementById(id).ariaCurrent = 'page';
+  document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
+  document.getElementById("app-hoverPanel").style.display = "none";
+}
+
+function openQuickView() {
+  document.getElementById("app-hoverPanel").style.display = "block";
+}
+
+function closeQuickView() {
+  setTimeout(close, 5000);
+
+  function close() {
+    document.getElementById("app-hoverPanel").style.display = "none";
+  }
 }
 
 var _default = App;

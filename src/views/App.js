@@ -27,11 +27,14 @@ import {
 	SideNavMenuItem
 } from "carbon-components-react/lib/components/UIShell";
 
+import "./styles.css";
+
+
 const StoryContent = () => {
 	const content = (
-		<div id="divId" className="">
-			<div className="">
-				<section className="">
+		<div id="divId" className="bx--grid">
+			<div className="bx--row">
+				<section>
 					<h2
 						style={{
 							fontWeight: "800",
@@ -104,7 +107,7 @@ const StoryContent = () => {
 		</div>
 	);
 
-	return <Content id="main-content">{content}</Content>;
+	return <Content id="main-content" style={{ backgroundColor: 'lightgray' }}>{content}</Content>;
 };
 
 const Fade16 = () => (
@@ -119,19 +122,43 @@ const Fade16 = () => (
 	</svg>
 );
 
+const QuickView = () => (
+	<div id="app-hoverPanel" className="app-hoverPanel" style={{ display: 'none', top: '153.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Operational Dashboard</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+
+				</div>
+			</div>
+			<div className="bx--col-md-4">Provides visibility into operational and monitoring performance.</div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-5"><p className="related-reports-label">Related reports:</p><ul><li><a target="_blank" rel="noopener noreferrer">Paid Media</a></li></ul></div>
+			<div className="bx--col-md-3">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
 const App = () => (
 	<div className="container">
 		<HeaderContainer
 			render={({ isSideNavExpanded, onClickSideNavExpand }) => (
 				<>
-					<Header aria-label="IBM Platform Name">
+					<Header aria-label="IBM Platform Name" style={{ backgroundColor: '#009d9a' }}>
 						<SkipToContent />
-						<HeaderMenuButton
+						<HeaderMenuButton style={{ backgroundColor: '#009d9a' }}
 							aria-label="Open menu"
 							onClick={onClickSideNavExpand}
 							isActive={isSideNavExpanded}
 						/>
-						<HeaderName href="#" prefix="IBM">
+						<HeaderName href="/mipdashboard" prefix="IBM">
 							DIAMOND
 						</HeaderName>
 						<HeaderGlobalBar>
@@ -145,40 +172,43 @@ const App = () => (
 								<AppSwitcher20 />
 							</HeaderGlobalAction>
 						</HeaderGlobalBar>
-						<SideNav aria-label="Side navigation" isFixedNav={true} expanded={isSideNavExpanded}>
-							<SideNavItems>
-								<SideNavMenu renderIcon={Fade16} title="Dundas">
-									<SideNavMenuItem id="operDash" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
-										Operational Dashboard
+						<SideNav aria-label="Side navigation" className="app--side-nav app--side-nav--is-open" isFixedNav={true} expanded={isSideNavExpanded}>
+							<div className="app--side-nav__header">
+								<div className="app--side-nav__header-title">
+									<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" className="app--side-nav__header-title__icon">
+										<path d="M15 20H17V24H15zM20 18H22V24H20zM10 14H12V24H10z"></path>
+										<path d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"></path>
+									</svg>reports
+								</div>
+							</div>
+							<SideNavItems className="app--side-nav__sections-container">
+								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
+								<SideNavMenu className="app--side-nav__menu-item-btn" title="Dundas">
+									<SideNavMenuItem className="app--side-nav__menu-item" id="operDash" onMouseOut={() => closeQuickView()} onMouseOver={() => openQuickView()} onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
+										<span className="app--side-nav__item-title">Operational Dashboard</span>
 									</SideNavMenuItem>
-									<SideNavMenuItem href="#">
-										Additional Dashboard
-									</SideNavMenuItem>
-									<SideNavMenuItem href="#">
-										Other Dashboard
-									</SideNavMenuItem>
-								</SideNavMenu>
-								<SideNavMenu renderIcon={Fade16} title="Grafana">
-									<SideNavMenuItem href="#">
-										Operational Dashboard
-									</SideNavMenuItem>
-									<SideNavMenuItem href="#">
-										Additional Dashboard
-									</SideNavMenuItem>
-									<SideNavMenuItem href="#">
-										Other Dashboard
+									<SideNavMenuItem className="app--side-nav__menu-item" id="addiDash">
+										<span className="app--side-nav__item-title">Additinal Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
-								<SideNavLink renderIcon={Fade16} href="#">
-									Some Other Dashboard
-								</SideNavLink>
-								<SideNavLink renderIcon={Fade16} href="#">
-									Some Other Dashboard 2
-								</SideNavLink>
+								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>DATABASE</p>
+								<SideNavMenu className="app--side-nav__menu-item-btn" title="Cloud">
+									<SideNavMenuItem className="app--side-nav__menu-item" id="dbDash">
+										<span className="app--side-nav__item-title">Cloud DB Dashboard</span>
+									</SideNavMenuItem>
+								</SideNavMenu>
+								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>GRAFANA</p>
+								<SideNavMenu className="app--side-nav__menu-item-btn" title="Coming Soon">
+									<SideNavMenuItem className="app--side-nav__menu-item" id="grafDash">
+										<span className="app--side-nav__item-title">Grafana Dashboard</span>
+									</SideNavMenuItem>
+								</SideNavMenu>
 							</SideNavItems>
 						</SideNav>
 					</Header>
 					<StoryContent />
+					<QuickView />
+
 				</>
 			)}
 		/>
@@ -191,6 +221,19 @@ function loadDashboard(id, url) {
 	document.getElementById("divId").style.width = '100%';
 	document.getElementById("divId").style.height = '100%';
 	document.getElementById(id).ariaCurrent = 'page';
+	document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
+	document.getElementById("app-hoverPanel").style.display = "none";
+}
+
+function openQuickView() {
+	document.getElementById("app-hoverPanel").style.display = "block";
+}
+
+function closeQuickView() {
+	setTimeout(close, 5000);
+	function close() {
+		document.getElementById("app-hoverPanel").style.display = "none";
+	}
 }
 
 export default App;
