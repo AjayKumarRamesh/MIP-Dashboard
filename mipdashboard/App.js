@@ -7,12 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _ = _interopRequireDefault(require("@carbon/icons-react/lib/search/20"));
-
-var _2 = _interopRequireDefault(require("@carbon/icons-react/lib/notification/20"));
-
-var _3 = _interopRequireDefault(require("@carbon/icons-react/lib/app-switcher/20"));
-
 var _HeaderContainer = _interopRequireDefault(require("carbon-components-react/lib/components/UIShell/HeaderContainer"));
 
 var _UIShell = require("carbon-components-react/lib/components/UIShell");
@@ -30,13 +24,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const StoryContent = () => {
   const content = /*#__PURE__*/_react.default.createElement("div", {
     id: "divId",
-    className: "bx--grid"
+    className: "bx--grid",
+    style: {
+      maxWidth: '93vw'
+    }
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "bx--row"
   }, /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
-      margin: "30px 0",
+      marginBottom: "30px",
       fontSize: "20px"
     }
   }, "Purpose and function"), /*#__PURE__*/_react.default.createElement("p", {
@@ -144,15 +141,22 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     href: "/mipdashboard",
     prefix: "IBM"
   }, "DIAMOND"), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalBar, null, /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalAction, {
-    "aria-label": "Search",
-    onClick: () => {}
-  }, /*#__PURE__*/_react.default.createElement(_.default, null)), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalAction, {
-    "aria-label": "Notifications",
-    onClick: () => {}
-  }, /*#__PURE__*/_react.default.createElement(_2.default, null)), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderGlobalAction, {
-    "aria-label": "App Switcher",
-    onClick: () => {}
-  }, /*#__PURE__*/_react.default.createElement(_3.default, null))), /*#__PURE__*/_react.default.createElement(_UIShell.SideNav, {
+    style: {
+      backgroundColor: '#009d9a'
+    },
+    "aria-label": "Header Profile Button"
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    focusable: "false",
+    preserveAspectRatio: "xMidYMid meet",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "currentColor",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 32 32",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"
+  })))), /*#__PURE__*/_react.default.createElement(_UIShell.SideNav, {
     "aria-label": "Side navigation",
     className: "app--side-nav app--side-nav--is-open",
     isFixedNav: true,
@@ -242,7 +246,7 @@ function openQuickView() {
 }
 
 function closeQuickView() {
-  setTimeout(close, 5000);
+  setTimeout(close, 3000);
 
   function close() {
     document.getElementById("app-hoverPanel").style.display = "none";

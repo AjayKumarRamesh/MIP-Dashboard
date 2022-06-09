@@ -74,19 +74,33 @@ app.use('/mipdashboard', (req, res) => {
 	res.send(
 		`
       <!DOCTYPE html>
-      <html lang="en" style="background-color: lightgray;">
+      <html lang="en">
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <title>MIP Dashboard</title>
           <link id="external-css" rel="stylesheet" type="text/css" href="https://unpkg.com/carbon-components/css/carbon-components.min.css" media="all">
+          <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         </head>
         <body>
           <noscript>
             You need to enable JavaScript to run this app.
           </noscript>
-          <div id="root">${ReactDOMServer.renderToString(React.createElement(App))}</div>
+          <div style="margin-top: 5rem; margin-left: 5.2rem; font-size: 1rem; font-weight: 700;">
+          	Welcome, <span id="userNameSpan"></span> <span id="userLastNameSpan"></span> <span style="visibility: hidden" id="userEmailIdSpan"></span>
+          </div>
+          <div id="root">
+          	${ReactDOMServer.renderToString(React.createElement(App))}
+          </div>
           <script src="./mipdashboard/${assetsByChunkName.main}"></script>
+          <script>
+			$.getJSON('/api/idPayload', function (id_token) {
+				$('#userNameSpan').html(id_token.given_name);
+				$('#userLastNameSpan').html(id_token.family_name);
+				$('#userEmailIdSpan').html(id_token.email);
+				
+			});
+		 </script>
         </body>
       </html>
     `
@@ -107,6 +121,8 @@ function getAppIDConfig() {
 	let config;
 
 	try {
+		// if running locally we'll have the local config file
+		//config = require('./localdev-config_local.json');
 		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
 			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
 			//config.redirectUri = process.env.redirectUri;

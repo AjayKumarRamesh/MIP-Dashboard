@@ -8,9 +8,6 @@
  */
 
 import React from "react";
-import Search20 from "@carbon/icons-react/lib/search/20";
-import Notification20 from "@carbon/icons-react/lib/notification/20";
-import AppSwitcher20 from "@carbon/icons-react/lib/app-switcher/20";
 import HeaderContainer from "carbon-components-react/lib/components/UIShell/HeaderContainer";
 import {
 	Content,
@@ -22,23 +19,21 @@ import {
 	SkipToContent,
 	SideNav,
 	SideNavItems,
-	SideNavLink,
 	SideNavMenu,
 	SideNavMenuItem
 } from "carbon-components-react/lib/components/UIShell";
 
 import "./styles.css";
 
-
 const StoryContent = () => {
 	const content = (
-		<div id="divId" className="bx--grid">
+		<div id="divId" className="bx--grid" style={{ maxWidth: '93vw' }}>
 			<div className="bx--row">
 				<section>
 					<h2
 						style={{
 							fontWeight: "800",
-							margin: "30px 0",
+							marginBottom: "30px",
 							fontSize: "20px"
 						}}
 					>
@@ -162,14 +157,10 @@ const App = () => (
 							DIAMOND
 						</HeaderName>
 						<HeaderGlobalBar>
-							<HeaderGlobalAction aria-label="Search" onClick={() => { }}>
-								<Search20 />
-							</HeaderGlobalAction>
-							<HeaderGlobalAction aria-label="Notifications" onClick={() => { }}>
-								<Notification20 />
-							</HeaderGlobalAction>
-							<HeaderGlobalAction aria-label="App Switcher" onClick={() => { }}>
-								<AppSwitcher20 />
+							<HeaderGlobalAction style={{ backgroundColor: '#009d9a' }} aria-label="Header Profile Button">
+								<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+									<path d="M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"></path>
+								</svg>
 							</HeaderGlobalAction>
 						</HeaderGlobalBar>
 						<SideNav aria-label="Side navigation" className="app--side-nav app--side-nav--is-open" isFixedNav={true} expanded={isSideNavExpanded}>
@@ -230,7 +221,7 @@ function openQuickView() {
 }
 
 function closeQuickView() {
-	setTimeout(close, 5000);
+	setTimeout(close, 3000);
 	function close() {
 		document.getElementById("app-hoverPanel").style.display = "none";
 	}
