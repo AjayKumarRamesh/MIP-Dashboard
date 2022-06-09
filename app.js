@@ -94,7 +94,7 @@ app.use('/mipdashboard', (req, res) => {
           </div>
           <script src="./mipdashboard/${assetsByChunkName.main}"></script>
           <script>
-			$.getJSON('/api/idPayload', function (id_token) {
+			$.getJSON('/mipdashboard/api/idPayload', function (id_token) {
 				$('#userNameSpan').html(id_token.given_name);
 				$('#userLastNameSpan').html(id_token.family_name);
 				$('#userEmailIdSpan').html(id_token.email);
