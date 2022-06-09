@@ -110,6 +110,8 @@ app.use('/mipdashboard', (req, res) => {
 
 //Serves the identity token payload
 app.get("/mipdashboard/api/idPayload", (req, res) => {
+	console.log(WebAppStrategy.AUTH_CONTEXT);
+	console.log(req.session);
 	res.send(req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload);
 });
 
