@@ -68,7 +68,9 @@ app.use('/mipdashboard', (req, res) => {
 	const { devMiddleware } = res.locals.webpack;
 	const { stats } = devMiddleware;
 	const { assetsByChunkName } = stats.toJson();
-
+	
+	const idPayload = req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload;
+				
 	res.setHeader('Content-Type', 'text/html');
 	res.setHeader('Cache-Control', 'public, max-age=0');
 	res.send(
@@ -80,27 +82,19 @@ app.use('/mipdashboard', (req, res) => {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <title>MIP Dashboard</title>
           <link id="external-css" rel="stylesheet" type="text/css" href="https://unpkg.com/carbon-components/css/carbon-components.min.css" media="all">
-          <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         </head>
         <body>
           <noscript>
             You need to enable JavaScript to run this app.
           </noscript>
           <div style="margin-top: 5rem; margin-left: 5.2rem; font-size: 1rem; font-weight: 700;">
-          	Welcome, <span id="userNameSpan"></span> <span id="userLastNameSpan"></span> <span style="visibility: hidden" id="userEmailIdSpan"></span>
+          	Welcome, <span id="userNameSpan">${idPayload.given_name}</span> <span id="userLastNameSpan">${idPayload.family_name}</span> 
+          	<span style="visibility: hidden" id="userEmailIdSpan">${idPayload.email}</span>
           </div>
           <div id="root">
           	${ReactDOMServer.renderToString(React.createElement(App))}
           </div>
           <script src="./mipdashboard/${assetsByChunkName.main}"></script>
-          <script>
-			$.getJSON('/mipdashboard/api/idPayload', function (id_token) {
-				$('#userNameSpan').html(id_token.given_name);
-				$('#userLastNameSpan').html(id_token.family_name);
-				$('#userEmailIdSpan').html(id_token.email);
-				
-			});
-		 </script>
         </body>
       </html>
     `
@@ -109,9 +103,7 @@ app.use('/mipdashboard', (req, res) => {
 });
 
 //Serves the identity token payload
-app.get("/mipdashboard/api/idPayload", (req, res) => {
-	console.log(WebAppStrategy.AUTH_CONTEXT);
-	console.log(req.session);
+app.get("/api/idPayload", (req, res) => {
 	res.send(req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload);
 });
 
