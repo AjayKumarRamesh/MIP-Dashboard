@@ -25,6 +25,8 @@ import {
 
 import "./styles.css";
 
+import image from "./operdashimg.jpg";
+
 const StoryContent = () => {
 	const content = (
 		<div id="divId" className="bx--grid" style={{ maxWidth: '93vw' }}>
@@ -125,7 +127,7 @@ const QuickView = () => (
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-
+					<img src={ image } alt="Report Preview Image" />
 				</div>
 			</div>
 			<div className="bx--col-md-4">Provides visibility into operational and monitoring performance.</div>

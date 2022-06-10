@@ -21,6 +21,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
  */
+const image = {
+  pathname: "\\src\\views\\operdashimg.jpg",
+  src: "\\src\\views\\operdashimg.jpg",
+  type: "jpeg",
+  width: 1196,
+  height: 959,
+  aspectRatio: 1.247,
+  heightToWidthRatio: 0.802
+};
+
 const StoryContent = () => {
   const content = /*#__PURE__*/_react.default.createElement("div", {
     id: "divId",
@@ -97,7 +107,10 @@ const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
-})), /*#__PURE__*/_react.default.createElement("div", {
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: image,
+  alt: "Report Preview Image"
+}))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
 }, "Provides visibility into operational and monitoring performance.")), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
