@@ -870,6 +870,18 @@ opacity:1
 	width: 3rem
 }
 
+.bx--side-nav--collapsed .bx--side-nav__items, .bx--side-nav__items
+	{
+	opacity: 0;
+	visibility: hidden
+}
+
+.bx--side-nav--expanded .bx--side-nav__items, .bx--side-nav__items
+{
+	opacity: 1;
+	visibility: visible
+}
+ 
 .app--side-nav:not(.app--side-nav--is-open) .bx--side-nav__items,
 	.app--side-nav.bx--side-nav--rail:not(.bx--side-nav--fixed):hover .bx--side-nav__items
 	{
