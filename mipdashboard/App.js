@@ -83,16 +83,6 @@ const StoryContent = () => {
   }, content);
 };
 
-const Fade16 = () => /*#__PURE__*/_react.default.createElement("svg", {
-  width: "16",
-  height: "16",
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 32 32",
-  "aria-hidden": "true"
-}, /*#__PURE__*/_react.default.createElement("path", {
-  d: "M8.24 25.14L7 26.67a14 14 0 0 0 4.18 2.44l.68-1.88a12 12 0 0 1-3.62-2.09zm-4.05-7.07l-2 .35A13.89 13.89 0 0 0 3.86 23l1.73-1a11.9 11.9 0 0 1-1.4-3.93zm7.63-13.31l-.68-1.88A14 14 0 0 0 7 5.33l1.24 1.53a12 12 0 0 1 3.58-2.1zM5.59 10L3.86 9a13.89 13.89 0 0 0-1.64 4.54l2 .35A11.9 11.9 0 0 1 5.59 10zM16 2v2a12 12 0 0 1 0 24v2a14 14 0 0 0 0-28z"
-}));
-
 const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   id: "app-hoverPanel",
   className: "app-hoverPanel",
@@ -134,6 +124,61 @@ const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("span", {
   className: "app-button__label"
 }, "View report"))))));
+
+const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelAd",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '186.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Additional Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: image,
+  alt: "Report Preview Image"
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Provides visibility into additional and monitoring performance.")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-5"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "related-reports-label"
+}, "Related reports:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  target: "_blank",
+  rel: "noopener noreferrer"
+}, "Paid Media")))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-3"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const Iframe = () => /*#__PURE__*/_react.default.createElement("iframe", {
+  id: "i_frame",
+  src: "",
+  style: {
+    border: '0pt none',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    display: 'none'
+  },
+  scrolling: "no"
+});
 
 const App = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "container"
@@ -209,13 +254,16 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     className: "app--side-nav__menu-item",
     id: "operDash",
     onMouseOut: () => closeQuickView(),
-    onMouseOver: () => openQuickView(),
+    onMouseOver: () => openQuickView("app-hoverPanel"),
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
   }, "Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
-    id: "addiDash"
+    id: "addiDash",
+    onMouseOut: () => closeQuickView(),
+    onMouseOver: () => openQuickView("app-hoverPanelAd"),
+    onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
   }, "Additinal Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
@@ -244,29 +292,45 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     id: "grafDash"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Grafana Dashboard")))))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null))
+  }, "Grafana Dashboard")))))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
 function loadDashboard(id, url) {
-  document.getElementById("welcomeDiv").style.display = "none";
-  document.getElementById("divId").innerHTML = '<iframe id="i_frame" src="https://ibm.biz/E2E_Monitoring" style="border: 0pt none; width: 100%; height: 100%;" scrolling="no"></iframe>';
-  document.getElementById("divId").style.position = 'absolute';
-  document.getElementById("divId").style.width = '100%';
-  document.getElementById("divId").style.height = '100%';
-  document.getElementById(id).ariaCurrent = 'page';
+  document.getElementById("i_frame").style.display = "block";
+  document.getElementById("i_frame").src = url;
+  hideAllContent();
+  clearAllNavSelections();
   document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
-  document.getElementById("app-hoverPanel").style.display = "none";
 }
 
-function openQuickView() {
-  document.getElementById("app-hoverPanel").style.display = "block";
+function hideAllContent() {
+  document.getElementById("welcomeDiv").style.display = "none";
+  document.getElementById("main-content").style.display = "none";
+  document.getElementById("app-hoverPanel").style.display = "none";
+  document.getElementById("app-hoverPanelAd").style.display = "none";
+}
+
+function clearAllNavSelections() {
+  document.getElementById("operDash").className = "bx--side-nav__link";
+  document.getElementById("addiDash").className = "bx--side-nav__link";
+}
+
+function openQuickView(id) {
+  closeAllQuickView();
+  document.getElementById(id).style.display = "block";
+}
+
+function closeAllQuickView() {
+  document.getElementById("app-hoverPanel").style.display = "none";
+  document.getElementById("app-hoverPanelAd").style.display = "none";
 }
 
 function closeQuickView() {
-  setTimeout(close, 3000);
+  var hovPanOper = document.getElementById("app-hoverPanel").style.display;
+  var hovPanAddi = document.getElementById("app-hoverPanelAd").style.display;
 
-  function close() {
-    document.getElementById("app-hoverPanel").style.display = "none";
+  if (hovPanOper == "block" || hovPanAddi == "block") {
+    setTimeout(closeAllQuickView, 5000);
   }
 }
 
