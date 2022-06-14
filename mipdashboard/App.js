@@ -34,13 +34,15 @@ const image = {
 const StoryContent = () => {
   const content = /*#__PURE__*/_react.default.createElement("div", {
     id: "divId",
-    className: "bx--grid",
-    style: {
-      maxWidth: '93vw'
-    }
+    className: "bx--grid"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "bx--row"
-  }, /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h2", {
+  }, /*#__PURE__*/_react.default.createElement("section", {
+    style: {
+      marginLeft: "1.5%",
+      padding: "2rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
       marginBottom: "30px",
@@ -75,7 +77,8 @@ const StoryContent = () => {
   return /*#__PURE__*/_react.default.createElement(_UIShell.Content, {
     id: "main-content",
     style: {
-      backgroundColor: 'lightgray'
+      backgroundColor: 'lightgray',
+      padding: '0rem'
     }
   }, content);
 };
@@ -245,6 +248,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
 }));
 
 function loadDashboard(id, url) {
+  document.getElementById("welcomeDiv").style.display = "none";
   document.getElementById("divId").innerHTML = '<iframe id="i_frame" src="https://ibm.biz/E2E_Monitoring" style="border: 0pt none; width: 100%; height: 100%;" scrolling="no"></iframe>';
   document.getElementById("divId").style.position = 'absolute';
   document.getElementById("divId").style.width = '100%';

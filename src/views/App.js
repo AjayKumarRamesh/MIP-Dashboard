@@ -29,9 +29,9 @@ import image from "./operdashimg.jpg";
 
 const StoryContent = () => {
 	const content = (
-		<div id="divId" className="bx--grid" style={{ maxWidth: '93vw' }}>
+		<div id="divId" className="bx--grid">
 			<div className="bx--row">
-				<section>
+				<section style={{ marginLeft: "1.5%", padding: "2rem" }}>
 					<h2
 						style={{
 							fontWeight: "800",
@@ -104,7 +104,7 @@ const StoryContent = () => {
 		</div>
 	);
 
-	return <Content id="main-content" style={{ backgroundColor: 'lightgray' }}>{content}</Content>;
+	return <Content id="main-content" style={{ backgroundColor: 'lightgray', padding: '0rem' }}>{content}</Content>;
 };
 
 const Fade16 = () => (
@@ -127,7 +127,7 @@ const QuickView = () => (
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={ image } alt="Report Preview Image" />
+					<img src={image} alt="Report Preview Image" />
 				</div>
 			</div>
 			<div className="bx--col-md-4">Provides visibility into operational and monitoring performance.</div>
@@ -177,7 +177,10 @@ const App = () => (
 							<SideNavItems className="app--side-nav__sections-container">
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Dundas">
-									<SideNavMenuItem className="app--side-nav__menu-item" id="operDash" onMouseOut={() => closeQuickView()} onMouseOver={() => openQuickView()} onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
+									<SideNavMenuItem className="app--side-nav__menu-item" id="operDash" 
+										onMouseOut={() => closeQuickView()}
+										onMouseOver={() => openQuickView()} 
+										onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 										<span className="app--side-nav__item-title">Operational Dashboard</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" id="addiDash">
@@ -201,7 +204,6 @@ const App = () => (
 					</Header>
 					<StoryContent />
 					<QuickView />
-
 				</>
 			)}
 		/>
@@ -209,6 +211,7 @@ const App = () => (
 );
 
 function loadDashboard(id, url) {
+	document.getElementById("welcomeDiv").style.display = "none";
 	document.getElementById("divId").innerHTML = '<iframe id="i_frame" src="https://ibm.biz/E2E_Monitoring" style="border: 0pt none; width: 100%; height: 100%;" scrolling="no"></iframe>';
 	document.getElementById("divId").style.position = 'absolute';
 	document.getElementById("divId").style.width = '100%';

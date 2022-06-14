@@ -87,7 +87,7 @@ app.use('/mipdashboard', (req, res) => {
           <noscript>
             You need to enable JavaScript to run this app.
           </noscript>
-          <div style="margin-top: 5rem; margin-left: 5.2rem; font-size: 1rem; font-weight: 700;">
+          <div id="welcomeDiv" style="margin-top: 5rem; margin-left: 5.2rem; font-size: 1rem; font-weight: 700;">
           	Welcome, <span id="userNameSpan">${idPayload.given_name}</span> <span id="userLastNameSpan">${idPayload.family_name}</span> 
           	<span style="visibility: hidden" id="userEmailIdSpan">${idPayload.email}</span>
           </div>
@@ -116,7 +116,7 @@ function getAppIDConfig() {
 
 	try {
 		// if running locally we'll have the local config file
-		//config = require('./localdev-config_local.json');
+		// config = require('./localdev-config_local.json');
 		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
 			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
 			//config.redirectUri = process.env.redirectUri;
