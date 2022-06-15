@@ -156,7 +156,7 @@ const QuickViewAD = () => (
 );
 
 const Iframe = () => (
-	<iframe id="i_frame" src="" style={{ border: '0pt none', width: '100%', height: '100%', position: 'absolute', display: 'none' }} scrolling="no"></iframe>
+	<iframe id="i_frame" src="" style={{ border: '0pt none', width: '100%', height: '100%', position: 'absolute', display: 'none', paddingTop: '3rem' }} scrolling="no"></iframe>
 );
 
 const App = () => (

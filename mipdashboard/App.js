@@ -175,7 +175,8 @@ const Iframe = () => /*#__PURE__*/_react.default.createElement("iframe", {
     width: '100%',
     height: '100%',
     position: 'absolute',
-    display: 'none'
+    display: 'none',
+    paddingTop: '3rem'
   },
   scrolling: "no"
 });
