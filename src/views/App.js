@@ -193,13 +193,13 @@ const App = () => (
 							<SideNavItems className="app--side-nav__sections-container">
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Dundas">
-									<SideNavMenuItem className="app--side-nav__menu-item" id="operDash"
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="operDash"
 										onMouseOut={() => closeQuickView()}
 										onMouseOver={() => openQuickView("app-hoverPanel")}
 										onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 										<span className="app--side-nav__item-title">Operational Dashboard</span>
 									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" id="addiDash"
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="addiDash"
 										onMouseOut={() => closeQuickView()}
 										onMouseOver={() => openQuickView("app-hoverPanelAd")}
 										onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
@@ -208,13 +208,13 @@ const App = () => (
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>DATABASE</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Cloud">
-									<SideNavMenuItem className="app--side-nav__menu-item" id="dbDash">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="dbDash">
 										<span className="app--side-nav__item-title">Cloud DB Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>GRAFANA</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Coming Soon">
-									<SideNavMenuItem className="app--side-nav__menu-item" id="grafDash">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="grafDash">
 										<span className="app--side-nav__item-title">Grafana Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>

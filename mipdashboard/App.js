@@ -252,6 +252,9 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     title: "Dundas"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
     id: "operDash",
     onMouseOut: () => closeQuickView(),
     onMouseOver: () => openQuickView("app-hoverPanel"),
@@ -260,6 +263,9 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     className: "app--side-nav__item-title"
   }, "Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
     id: "addiDash",
     onMouseOut: () => closeQuickView(),
     onMouseOver: () => openQuickView("app-hoverPanelAd"),
@@ -276,6 +282,9 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     title: "Cloud"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
     id: "dbDash"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
@@ -289,6 +298,9 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     title: "Coming Soon"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
     id: "grafDash"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
