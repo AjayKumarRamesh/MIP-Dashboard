@@ -8,6 +8,20 @@ data:
     eyJhdXRocyI6eyJ1cy5pY3IuaW8iOnsidXNlcm5hbWUiOiJpYW1hcGlrZXkiLCJwYXNzd29yZCI6Im9Wa1hlcDRJdEdiWVpEd21jWkJ2VHZKeDd0LU05bEZVU1JadWYtZVQyTTJvIiwiZW1haWwiOiJpYW1hcGlrZXkiLCJhdXRoIjoiYVdGdFlYQnBhMlY1T205V2ExaGxjRFJKZEVkaVdWcEVkMjFqV2tKMlZIWktlRGQwTFUwNWJFWlZVMUphZFdZdFpWUXlUVEp2In19fQ==
 type: kubernetes.io/dockerconfigjson
 ---
+apiVersion: 'kubernetes-client.io/v1'
+kind: ExternalSecret
+metadata:
+  name: mip-dashboard-dev-config-secret
+  namespace: mipdashboard
+spec:
+  backendType: ibmcloudSecretsManager
+  keyByName: true 
+  data:
+    - key: MIP_DASHBOARD_DEV_CONFIG
+      property: payload
+      name: APPID_SERVICE_BINDING
+      secretType: kv
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -33,6 +47,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: mip-dashboard-dev-config-secret
       imagePullSecrets:
         - name: default-us-icr-io
         
