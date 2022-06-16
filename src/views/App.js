@@ -23,6 +23,8 @@ import {
 	SideNavMenuItem
 } from "carbon-components-react/lib/components/UIShell";
 
+import Toggle from 'carbon-components-react/lib/components/Toggle';
+
 import "./styles.css";
 
 import image from "./operdashimg.jpg";
@@ -159,12 +161,19 @@ const Iframe = () => (
 	<iframe id="i_frame" src="" style={{ border: '0pt none', width: '100%', height: '100%', position: 'absolute', display: 'none', paddingTop: '3rem' }} scrolling="no"></iframe>
 );
 
+const HoverStates = () => (
+	<div className="app--side-nav__hover-toggle" style={{ display: 'flex', alignItems: 'center', marginLeft: '1rem' }}>
+		<div style={{ marginRight: '1rem' }} >Hover states</div>
+		<Toggle id="hover-toggle" size="sm" labelA="Off" labelB="On" defaultToggled />
+	</div>
+);
+
 const App = () => (
 	<div className="container">
 		<HeaderContainer
 			render={({ isSideNavExpanded, onClickSideNavExpand }) => (
 				<>
-					<Header aria-label="IBM Platform Name" style={{ backgroundColor: '#009d9a' }}>
+					<Header aria-label="IBM Platform Name" style={{ backgroundColor: '#009d9a', borderBottom: '#009d9a' }}>
 						<SkipToContent />
 						<HeaderMenuButton style={{ backgroundColor: '#009d9a' }}
 							aria-label="Open menu"
@@ -193,14 +202,12 @@ const App = () => (
 							<SideNavItems className="app--side-nav__sections-container">
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Dundas">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="operDash"
-										onMouseOut={() => closeQuickView()}
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="operDash"
 										onMouseOver={() => openQuickView("app-hoverPanel")}
 										onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 										<span className="app--side-nav__item-title">Operational Dashboard</span>
 									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="addiDash"
-										onMouseOut={() => closeQuickView()}
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
 										onMouseOver={() => openQuickView("app-hoverPanelAd")}
 										onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
 										<span className="app--side-nav__item-title">Additinal Dashboard</span>
@@ -208,17 +215,18 @@ const App = () => (
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>DATABASE</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Cloud">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="dbDash">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dbDash">
 										<span className="app--side-nav__item-title">Cloud DB Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>GRAFANA</p>
 								<SideNavMenu className="app--side-nav__menu-item-btn" title="Coming Soon">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer'}} id="grafDash">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDash">
 										<span className="app--side-nav__item-title">Grafana Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
 							</SideNavItems>
+							<HoverStates />
 						</SideNav>
 					</Header>
 					<StoryContent />
@@ -253,7 +261,10 @@ function clearAllNavSelections() {
 
 function openQuickView(id) {
 	closeAllQuickView();
-	document.getElementById(id).style.display = "block";
+	if (hoverStates()) {
+		document.getElementById(id).style.display = "block";
+		setTimeout(closeAllQuickView, 5000);
+	}
 }
 
 function closeAllQuickView() {
@@ -261,12 +272,8 @@ function closeAllQuickView() {
 	document.getElementById("app-hoverPanelAd").style.display = "none";
 }
 
-function closeQuickView() {
-	var hovPanOper = document.getElementById("app-hoverPanel").style.display;
-	var hovPanAddi = document.getElementById("app-hoverPanelAd").style.display;
-	if (hovPanOper == "block" || hovPanAddi == "block") {
-		setTimeout(closeAllQuickView, 5000);
-	}
+function hoverStates() {
+	return document.getElementById("hover-toggle").checked;
 }
 
 export default App;

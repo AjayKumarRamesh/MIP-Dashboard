@@ -11,6 +11,8 @@ var _HeaderContainer = _interopRequireDefault(require("carbon-components-react/l
 
 var _UIShell = require("carbon-components-react/lib/components/UIShell");
 
+var _Toggle = _interopRequireDefault(require("carbon-components-react/lib/components/Toggle"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -181,6 +183,25 @@ const Iframe = () => /*#__PURE__*/_react.default.createElement("iframe", {
   scrolling: "no"
 });
 
+const HoverStates = () => /*#__PURE__*/_react.default.createElement("div", {
+  className: "app--side-nav__hover-toggle",
+  style: {
+    display: 'flex',
+    alignItems: 'center',
+    marginLeft: '1rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  style: {
+    marginRight: '1rem'
+  }
+}, "Hover states"), /*#__PURE__*/_react.default.createElement(_Toggle.default, {
+  id: "hover-toggle",
+  size: "sm",
+  labelA: "Off",
+  labelB: "On",
+  defaultToggled: true
+}));
+
 const App = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "container"
 }, /*#__PURE__*/_react.default.createElement(_HeaderContainer.default, {
@@ -190,7 +211,8 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
   }) => /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_UIShell.Header, {
     "aria-label": "IBM Platform Name",
     style: {
-      backgroundColor: '#009d9a'
+      backgroundColor: '#009d9a',
+      borderBottom: '#009d9a'
     }
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SkipToContent, null), /*#__PURE__*/_react.default.createElement(_UIShell.HeaderMenuButton, {
     style: {
@@ -257,7 +279,6 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "operDash",
-    onMouseOut: () => closeQuickView(),
     onMouseOver: () => openQuickView("app-hoverPanel"),
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
@@ -268,7 +289,6 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "addiDash",
-    onMouseOut: () => closeQuickView(),
     onMouseOver: () => openQuickView("app-hoverPanelAd"),
     onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
@@ -305,7 +325,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     id: "grafDash"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Grafana Dashboard")))))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
+  }, "Grafana Dashboard")))), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
 function loadDashboard(id, url) {
@@ -330,7 +350,11 @@ function clearAllNavSelections() {
 
 function openQuickView(id) {
   closeAllQuickView();
-  document.getElementById(id).style.display = "block";
+
+  if (hoverStates()) {
+    document.getElementById(id).style.display = "block";
+    setTimeout(closeAllQuickView, 5000);
+  }
 }
 
 function closeAllQuickView() {
@@ -338,13 +362,8 @@ function closeAllQuickView() {
   document.getElementById("app-hoverPanelAd").style.display = "none";
 }
 
-function closeQuickView() {
-  var hovPanOper = document.getElementById("app-hoverPanel").style.display;
-  var hovPanAddi = document.getElementById("app-hoverPanelAd").style.display;
-
-  if (hovPanOper == "block" || hovPanAddi == "block") {
-    setTimeout(closeAllQuickView, 5000);
-  }
+function hoverStates() {
+  return document.getElementById("hover-toggle").checked;
 }
 
 var _default = App;
