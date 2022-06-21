@@ -24,9 +24,10 @@ import {
 } from "carbon-components-react/lib/components/UIShell";
 
 import Toggle from 'carbon-components-react/lib/components/Toggle';
+import OverflowMenu from 'carbon-components-react/lib/components/OverflowMenu';
+import OverflowMenuItem from 'carbon-components-react/lib/components/OverflowMenuItem';
 
 import "./styles.css";
-
 import image from "./operdashimg.jpg";
 
 const StoryContent = () => {
@@ -168,6 +169,12 @@ const HoverStates = () => (
 	</div>
 );
 
+const ProfileIcon = () => (
+	<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+		<path d="M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"></path>
+	</svg>
+);
+
 const App = () => (
 	<div className="container">
 		<HeaderContainer
@@ -185,9 +192,9 @@ const App = () => (
 						</HeaderName>
 						<HeaderGlobalBar>
 							<HeaderGlobalAction style={{ backgroundColor: '#009d9a' }} aria-label="Header Profile Button">
-								<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
-									<path d="M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"></path>
-								</svg>
+								<OverflowMenu renderIcon={ProfileIcon} flipped style={{ background: '#009d9a', outline: '#009d9a'}}>
+									<OverflowMenuItem itemText="Log Out" href="/mipdashboard/logout"/>
+								</OverflowMenu>
 							</HeaderGlobalAction>
 						</HeaderGlobalBar>
 						<SideNav aria-label="Side navigation" className="app--side-nav app--side-nav--is-open" isFixedNav={true} expanded={isSideNavExpanded}>

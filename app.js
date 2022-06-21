@@ -68,9 +68,30 @@ app.use('/mipdashboard', (req, res) => {
 	const { devMiddleware } = res.locals.webpack;
 	const { stats } = devMiddleware;
 	const { assetsByChunkName } = stats.toJson();
-	
+
 	const idPayload = req.session[WebAppStrategy.AUTH_CONTEXT].identityTokenPayload;
-				
+
+	if (req.originalUrl.indexOf("logout") != -1) {
+		WebAppStrategy.logout(req);
+		//res.redirect(logout);
+		res.send(
+			`
+			<!DOCTYPE html>
+			<html>
+			<head>
+			<meta charset="ISO-8859-1">
+			<title>MIP Dashboard Log Out</title>
+			</head>
+			<body>
+				<h2>You have been logged out !!</h2>
+			</body>
+			</html>
+			`
+		);
+		res.end();
+		return;
+	}
+
 	res.setHeader('Content-Type', 'text/html');
 	res.setHeader('Cache-Control', 'public, max-age=0');
 	res.send(

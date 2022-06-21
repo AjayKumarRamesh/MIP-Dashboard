@@ -13,6 +13,10 @@ var _UIShell = require("carbon-components-react/lib/components/UIShell");
 
 var _Toggle = _interopRequireDefault(require("carbon-components-react/lib/components/Toggle"));
 
+var _OverflowMenu = _interopRequireDefault(require("carbon-components-react/lib/components/OverflowMenu"));
+
+var _OverflowMenuItem = _interopRequireDefault(require("carbon-components-react/lib/components/OverflowMenuItem"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -202,6 +206,19 @@ const HoverStates = () => /*#__PURE__*/_react.default.createElement("div", {
   defaultToggled: true
 }));
 
+const ProfileIcon = () => /*#__PURE__*/_react.default.createElement("svg", {
+  focusable: "false",
+  preserveAspectRatio: "xMidYMid meet",
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "white",
+  width: "20",
+  height: "20",
+  viewBox: "0 0 32 32",
+  "aria-hidden": "true"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"
+}));
+
 const App = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "container"
 }, /*#__PURE__*/_react.default.createElement(_HeaderContainer.default, {
@@ -229,17 +246,16 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       backgroundColor: '#009d9a'
     },
     "aria-label": "Header Profile Button"
-  }, /*#__PURE__*/_react.default.createElement("svg", {
-    focusable: "false",
-    preserveAspectRatio: "xMidYMid meet",
-    xmlns: "http://www.w3.org/2000/svg",
-    fill: "currentColor",
-    width: "20",
-    height: "20",
-    viewBox: "0 0 32 32",
-    "aria-hidden": "true"
-  }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M12 4A5 5 0 117 9a5 5 0 015-5m0-2a7 7 0 107 7A7 7 0 0012 2zM22 30H20V25a5 5 0 00-5-5H9a5 5 0 00-5 5v5H2V25a7 7 0 017-7h6a7 7 0 017 7zM22 4H32V6H22zM22 9H32V11H22zM22 14H29V16H22z"
+  }, /*#__PURE__*/_react.default.createElement(_OverflowMenu.default, {
+    renderIcon: ProfileIcon,
+    flipped: true,
+    style: {
+      background: '#009d9a',
+      outline: '#009d9a'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_OverflowMenuItem.default, {
+    itemText: "Log Out",
+    href: "/mipdashboard/logout"
   })))), /*#__PURE__*/_react.default.createElement(_UIShell.SideNav, {
     "aria-label": "Side navigation",
     className: "app--side-nav app--side-nav--is-open",
