@@ -28,79 +28,101 @@ import OverflowMenu from 'carbon-components-react/lib/components/OverflowMenu';
 import OverflowMenuItem from 'carbon-components-react/lib/components/OverflowMenuItem';
 
 import "./styles.css";
-import image from "./operdashimg.jpg";
+import operationalImage from "./e2e_operational_dashboard_preview.png";
+import newsletterImage from "./newletter_subs_preview.png";
+import noImage from "./no-image.png";
 
 const StoryContent = () => {
 	const content = (
 		<div id="divId" className="bx--grid">
 			<div className="bx--row">
 				<section style={{ marginLeft: "1.5%", padding: "2rem" }}>
-					<h2
-						style={{
-							fontWeight: "800",
-							marginBottom: "30px",
-							fontSize: "20px"
-						}}
-					>
-						Purpose and function
-					</h2>
-					<p style={{ lineHeight: "20px" }}>
-						The shell is perhaps the most crucial piece of any UI built with
-						Carbon. It contains the shared navigation framework for the entire
-						design system and ties the products in IBM’s portfolio together in a
-						cohesive and elegant way. The shell is the home of the topmost
-						navigation, where users can quickly and dependably gain their
-						bearings and move between pages.
-						<br />
-						<br />
-						The shell was designed with maximum flexibility built in, to serve
-						the needs of a broad range of products and users. Adopting the shell
-						ensures compliance with IBM design standards, simplifies development
-						efforts, and provides great user experiences. All IBM products built
-						with Carbon are required to use the shell’s header.
-						<br />
-						<br />
-						To better understand the purpose and function of the UI shell,
-						consider the “shell” of MacOS, which contains the Apple menu,
-						top-level navigation, and universal, OS-level controls at the top of
-						the screen, as well as a universal dock along the bottom or side of
-						the screen. The Carbon UI shell is roughly analogous in function to
-						these parts of the Mac UI. For example, the app switcher portion of
-						the shell can be compared to the dock in MacOS.
-					</p>
-					<h2
-						style={{
-							fontWeight: "800",
-							margin: "30px 0",
-							fontSize: "20px"
-						}}
-					>
-						Header responsive behavior
-					</h2>
-					<p style={{ lineHeight: "20px" }}>
-						As a header scales down to fit smaller screen sizes, headers with
-						persistent side nav menus should have the side nav collapse into
-						“hamburger” menu. See the example to better understand responsive
-						behavior of the header.
-					</p>
-					<h2
-						style={{
-							fontWeight: "800",
-							margin: "30px 0",
-							fontSize: "20px"
-						}}
-					>
-						Secondary navigation
-					</h2>
-					<p style={{ lineHeight: "20px" }}>
-						The side-nav contains secondary navigation and fits below the
-						header. It can be configured to be either fixed-width or flexible,
-						with only one level of nested items allowed. Both links and category
-						lists can be used in the side-nav and may be mixed together. There
-						are several configurations of the side-nav, but only one
-						configuration should be used per product section. If tabs are needed
-						on a page when using a side-nav, then the tabs are secondary in
-						hierarchy to the side-nav.
+					<p style={{ lineHeight: "30px", display: 'flex' }}>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={operationalImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>E2E Operational Dashboard</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Provides Insight into the real time status of ETL processes and data flowing through MIP including the Upstream & Downstream systems.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>HRM Performance Dashboard</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={newsletterImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>Newsletter Subscriptions</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>Data Quality Audit</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>Data Funnel Dashboard</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>E2E Data Story</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
 					</p>
 				</section>
 			</div>
@@ -113,19 +135,18 @@ const StoryContent = () => {
 const QuickView = () => (
 	<div id="app-hoverPanel" className="app-hoverPanel" style={{ display: 'none', top: '153.8px' }}>
 		<div className="bx--row">
-			<div className="bx--col-lg-16"><h2>Operational Dashboard</h2></div>
+			<div className="bx--col-lg-16"><h2>E2E Operational Dashboard</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={image} alt="Report Preview Image" />
+					<img src={operationalImage} alt="Report Preview Image" style={{ height: '12rem' }} />
 				</div>
 			</div>
-			<div className="bx--col-md-4">Provides visibility into operational and monitoring performance.</div>
+			<div className="bx--col-md-4">Provides Insight into the real time status of ETL processes and data flowing through MIP including the Upstream & Downstream systems</div>
 		</div>
-		<div className="bx--row">
-			<div className="bx--col-md-5"><p className="related-reports-label">Related reports:</p><ul><li><a target="_blank" rel="noopener noreferrer">Paid Media</a></li></ul></div>
-			<div className="bx--col-md-3">
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
 				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
@@ -137,20 +158,111 @@ const QuickView = () => (
 const QuickViewAD = () => (
 	<div id="app-hoverPanelAd" className="app-hoverPanel" style={{ display: 'none', top: '186.8px' }}>
 		<div className="bx--row">
-			<div className="bx--col-lg-16"><h2>Additional Dashboard</h2></div>
+			<div className="bx--col-lg-16"><h2>HRM Performance Dashboard</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={image} alt="Report Preview Image" />
+					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem'  }} />
 				</div>
 			</div>
-			<div className="bx--col-md-4">Provides visibility into additional and monitoring performance.</div>
+			<div className="bx--col-md-4">Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewND = () => (
+	<div id="app-hoverPanelNews" className="app-hoverPanel" style={{ display: 'none', top: '215.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Newsletter Subscriptions</h2></div>
 		</div>
 		<div className="bx--row">
-			<div className="bx--col-md-5"><p className="related-reports-label">Related reports:</p><ul><li><a target="_blank" rel="noopener noreferrer">Paid Media</a></li></ul></div>
-			<div className="bx--col-md-3">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={newsletterImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewDQ = () => (
+	<div id="app-hoverPanelDataQ" className="app-hoverPanel" style={{ display: 'none', top: '318.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Data Quality Audit</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button">
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewDF = () => (
+	<div id="app-hoverPanelDataF" className="app-hoverPanel" style={{ display: 'none', top: '351.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Data Funnel Dashboard</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button">
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewDS = () => (
+	<div id="app-hoverPanelDataS" className="app-hoverPanel" style={{ display: 'none', top: '385.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>E2E Data Story</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -192,8 +304,8 @@ const App = () => (
 						</HeaderName>
 						<HeaderGlobalBar>
 							<HeaderGlobalAction style={{ backgroundColor: '#009d9a' }} aria-label="Header Profile Button">
-								<OverflowMenu renderIcon={ProfileIcon} flipped style={{ background: '#009d9a', outline: '#009d9a'}}>
-									<OverflowMenuItem itemText="Log Out" href="/mipdashboard/logout"/>
+								<OverflowMenu renderIcon={ProfileIcon} flipped style={{ background: '#009d9a', outline: '#009d9a' }}>
+									<OverflowMenuItem itemText="Log Out" href="/mipdashboard/logout" />
 								</OverflowMenu>
 							</HeaderGlobalAction>
 						</HeaderGlobalBar>
@@ -212,18 +324,32 @@ const App = () => (
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="operDash"
 										onMouseOver={() => openQuickView("app-hoverPanel")}
 										onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
-										<span className="app--side-nav__item-title">Operational Dashboard</span>
+										<span className="app--side-nav__item-title">E2E Operational Dashboard</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
 										onMouseOver={() => openQuickView("app-hoverPanelAd")}
 										onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
-										<span className="app--side-nav__item-title">Additinal Dashboard</span>
+										<span className="app--side-nav__item-title">HRM Performance</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="newsDash"
+										onMouseOver={() => openQuickView("app-hoverPanelNews")}
+										onClick={() => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')}>
+										<span className="app--side-nav__item-title">Newsletter Subscriptions</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>DATABASE</p>
-								<SideNavMenu className="app--side-nav__menu-item-btn" title="Cloud">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dbDash">
-										<span className="app--side-nav__item-title">Cloud DB Dashboard</span>
+								<SideNavMenu className="app--side-nav__menu-item-btn" title="DB">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dqaDash"
+										onMouseOver={() => openQuickView("app-hoverPanelDataQ")}>
+										<span className="app--side-nav__item-title">Data Quality Audit</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dfDash"
+										onMouseOver={() => openQuickView("app-hoverPanelDataF")}>
+										<span className="app--side-nav__item-title">Data Funnel Dashboard</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dsDash"
+										onMouseOver={() => openQuickView("app-hoverPanelDataS")}>
+										<span className="app--side-nav__item-title">E2E Data Story</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>GRAFANA</p>
@@ -239,6 +365,10 @@ const App = () => (
 					<StoryContent />
 					<QuickView />
 					<QuickViewAD />
+					<QuickViewND />
+					<QuickViewDQ />
+					<QuickViewDF />
+					<QuickViewDS />
 					<Iframe />
 				</>
 			)}
@@ -257,26 +387,34 @@ function loadDashboard(id, url) {
 function hideAllContent() {
 	document.getElementById("welcomeDiv").style.display = "none";
 	document.getElementById("main-content").style.display = "none";
-	document.getElementById("app-hoverPanel").style.display = "none";
-	document.getElementById("app-hoverPanelAd").style.display = "none";
+	closeAllQuickView();
 }
 
 function clearAllNavSelections() {
 	document.getElementById("operDash").className = "bx--side-nav__link";
 	document.getElementById("addiDash").className = "bx--side-nav__link";
+	document.getElementById("newsDash").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
+	var timeoutId = null;
 	closeAllQuickView();
 	if (hoverStates()) {
 		document.getElementById(id).style.display = "block";
-		setTimeout(closeAllQuickView, 5000);
+		timeoutId = setTimeout(closeAllQuickView, 5000);
+		while (timeoutId--) {
+			clearTimeout(timeoutId);
+		}
 	}
 }
 
 function closeAllQuickView() {
 	document.getElementById("app-hoverPanel").style.display = "none";
 	document.getElementById("app-hoverPanelAd").style.display = "none";
+	document.getElementById("app-hoverPanelNews").style.display = "none";
+	document.getElementById("app-hoverPanelDataQ").style.display = "none";
+	document.getElementById("app-hoverPanelDataF").style.display = "none";
+	document.getElementById("app-hoverPanelDataS").style.display = "none";
 }
 
 function hoverStates() {

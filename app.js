@@ -108,7 +108,7 @@ app.use('/mipdashboard', (req, res) => {
           <noscript>
             You need to enable JavaScript to run this app.
           </noscript>
-          <div id="welcomeDiv" style="margin-top: 5rem; margin-left: 5.2rem; font-size: 1rem; font-weight: 700;">
+          <div id="welcomeDiv" style="margin-top: 5rem; margin-left: 5.3rem; font-size: 1rem; font-weight: 700;">
           	Welcome, <span id="userNameSpan">${idPayload.given_name}</span> <span id="userLastNameSpan">${idPayload.family_name}</span> 
           	<span style="visibility: hidden" id="userEmailIdSpan">${idPayload.email}</span>
           </div>

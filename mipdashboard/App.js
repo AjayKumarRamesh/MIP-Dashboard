@@ -27,14 +27,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
  */
-const image = {
-  pathname: "\\src\\views\\operdashimg.jpg",
-  src: "\\src\\views\\operdashimg.jpg",
-  type: "jpeg",
-  width: 1196,
-  height: 959,
-  aspectRatio: 1.247,
-  heightToWidthRatio: 0.802
+const operationalImage = {
+  pathname: "\\src\\views\\e2e_operational_dashboard_preview.png",
+  src: "\\src\\views\\e2e_operational_dashboard_preview.png",
+  type: "png",
+  width: 1154,
+  height: 920,
+  aspectRatio: 1.254,
+  heightToWidthRatio: 0.797
+};
+const newsletterImage = {
+  pathname: "\\src\\views\\newletter_subs_preview.png",
+  src: "\\src\\views\\newletter_subs_preview.png",
+  type: "png",
+  width: 909,
+  height: 680,
+  aspectRatio: 1.337,
+  heightToWidthRatio: 0.748
+};
+const noImage = {
+  pathname: "\\src\\views\\no-image.png",
+  src: "\\src\\views\\no-image.png",
+  type: "png",
+  width: 374,
+  height: 463,
+  aspectRatio: 0.808,
+  heightToWidthRatio: 1.238
 };
 
 const StoryContent = () => {
@@ -48,37 +66,232 @@ const StoryContent = () => {
       marginLeft: "1.5%",
       padding: "2rem"
     }
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      lineHeight: "30px",
+      display: 'flex'
+    }
+  }, /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: operationalImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
   }, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
       marginBottom: "30px",
       fontSize: "20px"
     }
-  }, "Purpose and function"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "E2E Operational Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
     style: {
-      lineHeight: "20px"
+      fontStyle: 'italic'
     }
-  }, "The shell is perhaps the most crucial piece of any UI built with Carbon. It contains the shared navigation framework for the entire design system and ties the products in IBM\u2019s portfolio together in a cohesive and elegant way. The shell is the home of the topmost navigation, where users can quickly and dependably gain their bearings and move between pages.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "The shell was designed with maximum flexibility built in, to serve the needs of a broad range of products and users. Adopting the shell ensures compliance with IBM design standards, simplifies development efforts, and provides great user experiences. All IBM products built with Carbon are required to use the shell\u2019s header.", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), "To better understand the purpose and function of the UI shell, consider the \u201Cshell\u201D of MacOS, which contains the Apple menu, top-level navigation, and universal, OS-level controls at the top of the screen, as well as a universal dock along the bottom or side of the screen. The Carbon UI shell is roughly analogous in function to these parts of the Mac UI. For example, the app switcher portion of the shell can be compared to the dock in MacOS."), /*#__PURE__*/_react.default.createElement("h2", {
+  }, "Provides Insight into the real time status of ETL processes and data flowing through MIP including the Upstream & Downstream systems.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: noImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
-      margin: "30px 0",
+      marginBottom: "30px",
       fontSize: "20px"
     }
-  }, "Header responsive behavior"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "HRM Performance Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
     style: {
-      lineHeight: "20px"
+      fontStyle: 'italic'
     }
-  }, "As a header scales down to fit smaller screen sizes, headers with persistent side nav menus should have the side nav collapse into \u201Chamburger\u201D menu. See the example to better understand responsive behavior of the header."), /*#__PURE__*/_react.default.createElement("h2", {
+  }, "Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: newsletterImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
     style: {
       fontWeight: "800",
-      margin: "30px 0",
+      marginBottom: "30px",
       fontSize: "20px"
     }
-  }, "Secondary navigation"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Newsletter Subscriptions")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
     style: {
-      lineHeight: "20px"
+      fontStyle: 'italic'
     }
-  }, "The side-nav contains secondary navigation and fits below the header. It can be configured to be either fixed-width or flexible, with only one level of nested items allowed. Both links and category lists can be used in the side-nav and may be mixed together. There are several configurations of the side-nav, but only one configuration should be used per product section. If tabs are needed on a page when using a side-nav, then the tabs are secondary in hierarchy to the side-nav."))));
+  }, "Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: noImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    style: {
+      fontWeight: "800",
+      marginBottom: "30px",
+      fontSize: "20px"
+    }
+  }, "Data Quality Audit")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, "Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: noImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    style: {
+      fontWeight: "800",
+      marginBottom: "30px",
+      fontSize: "20px"
+    }
+  }, "Data Funnel Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, "provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: noImage,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    style: {
+      fontWeight: "800",
+      marginBottom: "30px",
+      fontSize: "20px"
+    }
+  }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, "High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  })))));
 
   return /*#__PURE__*/_react.default.createElement(_UIShell.Content, {
     id: "main-content",
@@ -100,28 +313,28 @@ const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-lg-16"
-}, /*#__PURE__*/_react.default.createElement("h2", null, "Operational Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+}, /*#__PURE__*/_react.default.createElement("h2", null, "E2E Operational Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: image,
-  alt: "Report Preview Image"
+  src: operationalImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
 }))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
-}, "Provides visibility into operational and monitoring performance.")), /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--row"
+}, "Provides Insight into the real time status of ETL processes and data flowing through MIP including the Upstream & Downstream systems")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
 }, /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--col-md-5"
-}, /*#__PURE__*/_react.default.createElement("p", {
-  className: "related-reports-label"
-}, "Related reports:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-  target: "_blank",
-  rel: "noopener noreferrer"
-}, "Paid Media")))), /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--col-md-3"
+  className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
   className: "app-button app-button--primary app-button--regular app-error__button",
   onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
@@ -142,31 +355,196 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-lg-16"
-}, /*#__PURE__*/_react.default.createElement("h2", null, "Additional Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+}, /*#__PURE__*/_react.default.createElement("h2", null, "HRM Performance Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: image,
-  alt: "Report Preview Image"
+  src: noImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
 }))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
-}, "Provides visibility into additional and monitoring performance.")), /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--row"
+}, "Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
 }, /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--col-md-5"
-}, /*#__PURE__*/_react.default.createElement("p", {
-  className: "related-reports-label"
-}, "Related reports:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-  target: "_blank",
-  rel: "noopener noreferrer"
-}, "Paid Media")))), /*#__PURE__*/_react.default.createElement("div", {
-  className: "bx--col-md-3"
+  className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
   className: "app-button app-button--primary app-button--regular app-error__button",
   onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewND = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelNews",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '215.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Newsletter Subscriptions"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: newsletterImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewDQ = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelDataQ",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '318.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Data Quality Audit"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: noImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewDF = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelDataF",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '351.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Data Funnel Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: noImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewDS = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelDataS",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '385.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "E2E Data Story"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: noImage,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -299,7 +677,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "E2E Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
@@ -309,23 +687,52 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Additinal Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+  }, "HRM Performance")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "newsDash",
+    onMouseOver: () => openQuickView("app-hoverPanelNews"),
+    onClick: () => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Newsletter Subscriptions"))), /*#__PURE__*/_react.default.createElement("p", {
     style: {
       fontSize: '1.2rem',
       marginTop: '10px'
     }
   }, "DATABASE"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
     className: "app--side-nav__menu-item-btn",
-    title: "Cloud"
+    title: "DB"
   }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
     },
-    id: "dbDash"
+    id: "dqaDash",
+    onMouseOver: () => openQuickView("app-hoverPanelDataQ")
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Cloud DB Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+  }, "Data Quality Audit")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "dfDash",
+    onMouseOver: () => openQuickView("app-hoverPanelDataF")
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Data Funnel Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "dsDash",
+    onMouseOver: () => openQuickView("app-hoverPanelDataS")
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "E2E Data Story"))), /*#__PURE__*/_react.default.createElement("p", {
     style: {
       fontSize: '1.2rem',
       marginTop: '10px'
@@ -341,7 +748,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     id: "grafDash"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Grafana Dashboard")))), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
+  }, "Grafana Dashboard")))), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
 function loadDashboard(id, url) {
@@ -355,27 +762,36 @@ function loadDashboard(id, url) {
 function hideAllContent() {
   document.getElementById("welcomeDiv").style.display = "none";
   document.getElementById("main-content").style.display = "none";
-  document.getElementById("app-hoverPanel").style.display = "none";
-  document.getElementById("app-hoverPanelAd").style.display = "none";
+  closeAllQuickView();
 }
 
 function clearAllNavSelections() {
   document.getElementById("operDash").className = "bx--side-nav__link";
   document.getElementById("addiDash").className = "bx--side-nav__link";
+  document.getElementById("newsDash").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
+  var timeoutId = null;
   closeAllQuickView();
 
   if (hoverStates()) {
     document.getElementById(id).style.display = "block";
-    setTimeout(closeAllQuickView, 5000);
+    timeoutId = setTimeout(closeAllQuickView, 5000);
+
+    while (timeoutId--) {
+      clearTimeout(timeoutId);
+    }
   }
 }
 
 function closeAllQuickView() {
   document.getElementById("app-hoverPanel").style.display = "none";
   document.getElementById("app-hoverPanelAd").style.display = "none";
+  document.getElementById("app-hoverPanelNews").style.display = "none";
+  document.getElementById("app-hoverPanelDataQ").style.display = "none";
+  document.getElementById("app-hoverPanelDataF").style.display = "none";
+  document.getElementById("app-hoverPanelDataS").style.display = "none";
 }
 
 function hoverStates() {
