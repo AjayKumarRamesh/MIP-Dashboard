@@ -37,7 +37,7 @@ const StoryContent = () => {
 		<div id="divId" className="bx--grid">
 			<div className="bx--row">
 				<section style={{ marginLeft: "1.5%", padding: "2rem" }}>
-					<p style={{ lineHeight: "30px", display: 'flex' }}>
+					<div style={{ lineHeight: "30px", display: 'flex' }}>
 						<hr style={{ color: 'aliceblue' }} />
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
@@ -56,20 +56,6 @@ const StoryContent = () => {
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
 								<div className="app-hoverPanel__img-wrapper">
-									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
-								</div>
-							</div>
-							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
-								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>HRM Performance Dashboard</h2>
-							</div>
-							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
-								Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.
-							</div>
-						</div>
-						<hr style={{ color: 'aliceblue' }} />
-						<div className="bx--row" style={{ marginLeft: "1rem" }}>
-							<div className="bx--col-lg-1">
-								<div className="app-hoverPanel__img-wrapper">
 									<img src={newsletterImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
 								</div>
 							</div>
@@ -78,6 +64,20 @@ const StoryContent = () => {
 							</div>
 							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
 								Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>HRM Performance Dashboard</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.
 							</div>
 						</div>
 						<hr style={{ color: 'aliceblue' }} />
@@ -123,7 +123,7 @@ const StoryContent = () => {
 							</div>
 						</div>
 						<hr style={{ color: 'aliceblue' }} />
-					</p>
+					</div>
 				</section>
 			</div>
 		</div>

@@ -66,7 +66,7 @@ const StoryContent = () => {
       marginLeft: "1.5%",
       padding: "2rem"
     }
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       lineHeight: "30px",
       display: 'flex'
@@ -121,42 +121,6 @@ const StoryContent = () => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app-hoverPanel__img-wrapper"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "HRM Performance Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
     src: newsletterImage,
     alt: "Report Preview Image",
     style: {
@@ -180,6 +144,42 @@ const StoryContent = () => {
       fontStyle: 'italic'
     }
   }, "Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: comingsoon,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    style: {
+      fontWeight: "800",
+      marginBottom: "30px",
+      fontSize: "20px"
+    }
+  }, "HRM Performance Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, "Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.")), /*#__PURE__*/_react.default.createElement("hr", {
     style: {
       color: 'aliceblue'
     }
