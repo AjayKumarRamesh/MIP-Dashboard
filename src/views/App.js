@@ -30,7 +30,7 @@ import OverflowMenuItem from 'carbon-components-react/lib/components/OverflowMen
 import "./styles.css";
 import operationalImage from "./e2e_operational_dashboard_preview.png";
 import newsletterImage from "./newletter_subs_preview.png";
-import noImage from "./no-image.png";
+import comingsoon from "./comingsoon.jpg";
 
 const StoryContent = () => {
 	const content = (
@@ -56,7 +56,7 @@ const StoryContent = () => {
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
 								<div className="app-hoverPanel__img-wrapper">
-									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
 								</div>
 							</div>
 							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
@@ -84,7 +84,7 @@ const StoryContent = () => {
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
 								<div className="app-hoverPanel__img-wrapper">
-									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
 								</div>
 							</div>
 							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
@@ -98,7 +98,7 @@ const StoryContent = () => {
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
 								<div className="app-hoverPanel__img-wrapper">
-									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
 								</div>
 							</div>
 							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
@@ -112,7 +112,7 @@ const StoryContent = () => {
 						<div className="bx--row" style={{ marginLeft: "1rem" }}>
 							<div className="bx--col-lg-1">
 								<div className="app-hoverPanel__img-wrapper">
-									<img src={noImage} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
 								</div>
 							</div>
 							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
@@ -163,14 +163,14 @@ const QuickViewAD = () => (
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem'  }} />
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem'  }} />
 				</div>
 			</div>
 			<div className="bx--col-md-4">Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times</div>
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -193,7 +193,7 @@ const QuickViewND = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -202,14 +202,14 @@ const QuickViewND = () => (
 );
 
 const QuickViewDQ = () => (
-	<div id="app-hoverPanelDataQ" className="app-hoverPanel" style={{ display: 'none', top: '318.8px' }}>
+	<div id="app-hoverPanelDataQ" className="app-hoverPanel" style={{ display: 'none', top: '247.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>Data Quality Audit</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
 				</div>
 			</div>
 			<div className="bx--col-md-4">Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified</div>
@@ -225,14 +225,14 @@ const QuickViewDQ = () => (
 );
 
 const QuickViewDF = () => (
-	<div id="app-hoverPanelDataF" className="app-hoverPanel" style={{ display: 'none', top: '351.8px' }}>
+	<div id="app-hoverPanelDataF" className="app-hoverPanel" style={{ display: 'none', top: '279.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>Data Funnel Dashboard</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
 				</div>
 			</div>
 			<div className="bx--col-md-4">provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing</div>
@@ -248,14 +248,14 @@ const QuickViewDF = () => (
 );
 
 const QuickViewDS = () => (
-	<div id="app-hoverPanelDataS" className="app-hoverPanel" style={{ display: 'none', top: '385.8px' }}>
+	<div id="app-hoverPanelDataS" className="app-hoverPanel" style={{ display: 'none', top: '311.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>E2E Data Story</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
 				<div className="app-hoverPanel__img-wrapper">
-					<img src={noImage} alt="Report Preview Image" style={{ height: '12rem' }} />
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
 				</div>
 			</div>
 			<div className="bx--col-md-4">High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP</div>
@@ -327,18 +327,13 @@ const App = () => (
 										<span className="app--side-nav__item-title">E2E Operational Dashboard</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
-										onMouseOver={() => openQuickView("app-hoverPanelAd")}
-										onClick={() => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')}>
+										onMouseOver={() => openQuickView("app-hoverPanelAd")}>
 										<span className="app--side-nav__item-title">HRM Performance</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="newsDash"
-										onMouseOver={() => openQuickView("app-hoverPanelNews")}
-										onClick={() => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')}>
+										onMouseOver={() => openQuickView("app-hoverPanelNews")}>
 										<span className="app--side-nav__item-title">Newsletter Subscriptions</span>
 									</SideNavMenuItem>
-								</SideNavMenu>
-								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>DATABASE</p>
-								<SideNavMenu className="app--side-nav__menu-item-btn" title="DB">
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dqaDash"
 										onMouseOver={() => openQuickView("app-hoverPanelDataQ")}>
 										<span className="app--side-nav__item-title">Data Quality Audit</span>
@@ -382,6 +377,7 @@ function loadDashboard(id, url) {
 	hideAllContent();
 	clearAllNavSelections();
 	document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
+	document.getElementsByClassName("bx--header__menu-toggle")[0].click();
 }
 
 function hideAllContent() {

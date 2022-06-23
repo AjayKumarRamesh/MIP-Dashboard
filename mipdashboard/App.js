@@ -45,14 +45,14 @@ const newsletterImage = {
   aspectRatio: 1.337,
   heightToWidthRatio: 0.748
 };
-const noImage = {
-  pathname: "\\src\\views\\no-image.png",
-  src: "\\src\\views\\no-image.png",
-  type: "png",
-  width: 374,
-  height: 463,
-  aspectRatio: 0.808,
-  heightToWidthRatio: 1.238
+const comingsoon = {
+  pathname: "\\src\\views\\comingsoon.jpg",
+  src: "\\src\\views\\comingsoon.jpg",
+  type: "jpeg",
+  width: 6001,
+  height: 4001,
+  aspectRatio: 1.5,
+  heightToWidthRatio: 0.667
 };
 
 const StoryContent = () => {
@@ -121,7 +121,7 @@ const StoryContent = () => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app-hoverPanel__img-wrapper"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: noImage,
+    src: comingsoon,
     alt: "Report Preview Image",
     style: {
       width: '7rem',
@@ -193,7 +193,7 @@ const StoryContent = () => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app-hoverPanel__img-wrapper"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: noImage,
+    src: comingsoon,
     alt: "Report Preview Image",
     style: {
       width: '7rem',
@@ -229,7 +229,7 @@ const StoryContent = () => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app-hoverPanel__img-wrapper"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: noImage,
+    src: comingsoon,
     alt: "Report Preview Image",
     style: {
       width: '7rem',
@@ -265,7 +265,7 @@ const StoryContent = () => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app-hoverPanel__img-wrapper"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: noImage,
+    src: comingsoon,
     alt: "Report Preview Image",
     style: {
       width: '7rem',
@@ -362,7 +362,7 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: noImage,
+  src: comingsoon,
   alt: "Report Preview Image",
   style: {
     height: '12rem'
@@ -378,8 +378,7 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
-  className: "app-button app-button--primary app-button--regular app-error__button",
-  onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
+  className: "app-button app-button--primary app-button--regular app-error__button"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -420,8 +419,7 @@ const QuickViewND = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
-  className: "app-button app-button--primary app-button--regular app-error__button",
-  onClick: () => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')
+  className: "app-button app-button--primary app-button--regular app-error__button"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -433,7 +431,7 @@ const QuickViewDQ = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '318.8px'
+    top: '247.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -446,7 +444,7 @@ const QuickViewDQ = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: noImage,
+  src: comingsoon,
   alt: "Report Preview Image",
   style: {
     height: '12rem'
@@ -474,7 +472,7 @@ const QuickViewDF = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '351.8px'
+    top: '279.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -487,7 +485,7 @@ const QuickViewDF = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: noImage,
+  src: comingsoon,
   alt: "Report Preview Image",
   style: {
     height: '12rem'
@@ -515,7 +513,7 @@ const QuickViewDS = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '385.8px'
+    top: '311.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -528,7 +526,7 @@ const QuickViewDS = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: noImage,
+  src: comingsoon,
   alt: "Report Preview Image",
   style: {
     height: '12rem'
@@ -683,8 +681,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "addiDash",
-    onMouseOver: () => openQuickView("app-hoverPanelAd"),
-    onClick: () => loadDashboard('addiDash', 'https://ibm.biz/E2E_Monitoring')
+    onMouseOver: () => openQuickView("app-hoverPanelAd")
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
   }, "HRM Performance")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
@@ -693,19 +690,10 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "newsDash",
-    onMouseOver: () => openQuickView("app-hoverPanelNews"),
-    onClick: () => loadDashboard('newsDash', 'https://ibm.biz/E2E_Monitoring')
+    onMouseOver: () => openQuickView("app-hoverPanelNews")
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Newsletter Subscriptions"))), /*#__PURE__*/_react.default.createElement("p", {
-    style: {
-      fontSize: '1.2rem',
-      marginTop: '10px'
-    }
-  }, "DATABASE"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
-    className: "app--side-nav__menu-item-btn",
-    title: "DB"
-  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "Newsletter Subscriptions")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
@@ -757,6 +745,7 @@ function loadDashboard(id, url) {
   hideAllContent();
   clearAllNavSelections();
   document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
+  document.getElementsByClassName("bx--header__menu-toggle")[0].click();
 }
 
 function hideAllContent() {
