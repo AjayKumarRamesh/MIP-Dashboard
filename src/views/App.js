@@ -20,7 +20,8 @@ import {
 	SideNav,
 	SideNavItems,
 	SideNavMenu,
-	SideNavMenuItem
+	SideNavMenuItem,
+	SideNavLink
 } from "carbon-components-react/lib/components/UIShell";
 
 import Toggle from 'carbon-components-react/lib/components/Toggle';
@@ -123,6 +124,20 @@ const StoryContent = () => {
 							</div>
 						</div>
 						<hr style={{ color: 'aliceblue' }} />
+						<div className="bx--row" style={{ marginLeft: "1rem" }}>
+							<div className="bx--col-lg-1">
+								<div className="app-hoverPanel__img-wrapper">
+									<img src={comingsoon} alt="Report Preview Image" style={{ width: '7rem', height: '7rem' }} />
+								</div>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								<h2 style={{ fontWeight: "800", marginBottom: "30px", fontSize: "20px" }}>Grafana Dashboard</h2>
+							</div>
+							<div className="bx--col-lg-11" style={{ fontStyle: 'italic' }}>
+								Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations.
+							</div>
+						</div>
+						<hr style={{ color: 'aliceblue' }} />
 					</div>
 				</section>
 			</div>
@@ -133,7 +148,7 @@ const StoryContent = () => {
 };
 
 const QuickView = () => (
-	<div id="app-hoverPanel" className="app-hoverPanel" style={{ display: 'none', top: '153.8px' }}>
+	<div id="app-hoverPanel" className="app-hoverPanel" style={{ display: 'none', top: '138.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>E2E Operational Dashboard</h2></div>
 		</div>
@@ -156,7 +171,7 @@ const QuickView = () => (
 );
 
 const QuickViewAD = () => (
-	<div id="app-hoverPanelAd" className="app-hoverPanel" style={{ display: 'none', top: '186.8px' }}>
+	<div id="app-hoverPanelAd" className="app-hoverPanel" style={{ display: 'none', top: '305.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>HRM Performance Dashboard</h2></div>
 		</div>
@@ -179,7 +194,7 @@ const QuickViewAD = () => (
 );
 
 const QuickViewND = () => (
-	<div id="app-hoverPanelNews" className="app-hoverPanel" style={{ display: 'none', top: '215.8px' }}>
+	<div id="app-hoverPanelNews" className="app-hoverPanel" style={{ display: 'none', top: '337.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>Newsletter Subscriptions</h2></div>
 		</div>
@@ -202,7 +217,7 @@ const QuickViewND = () => (
 );
 
 const QuickViewDQ = () => (
-	<div id="app-hoverPanelDataQ" className="app-hoverPanel" style={{ display: 'none', top: '247.8px' }}>
+	<div id="app-hoverPanelDataQ" className="app-hoverPanel" style={{ display: 'none', top: '170.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>Data Quality Audit</h2></div>
 		</div>
@@ -225,7 +240,7 @@ const QuickViewDQ = () => (
 );
 
 const QuickViewDF = () => (
-	<div id="app-hoverPanelDataF" className="app-hoverPanel" style={{ display: 'none', top: '279.8px' }}>
+	<div id="app-hoverPanelDataF" className="app-hoverPanel" style={{ display: 'none', top: '202.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>Data Funnel Dashboard</h2></div>
 		</div>
@@ -248,7 +263,7 @@ const QuickViewDF = () => (
 );
 
 const QuickViewDS = () => (
-	<div id="app-hoverPanelDataS" className="app-hoverPanel" style={{ display: 'none', top: '311.8px' }}>
+	<div id="app-hoverPanelDataS" className="app-hoverPanel" style={{ display: 'none', top: '369.8px' }}>
 		<div className="bx--row">
 			<div className="bx--col-lg-16"><h2>E2E Data Story</h2></div>
 		</div>
@@ -259,6 +274,29 @@ const QuickViewDS = () => (
 				</div>
 			</div>
 			<div className="bx--col-md-4">High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button">
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewGrafana = () => (
+	<div id="app-hoverPanelGrafana" className="app-hoverPanel" style={{ display: 'none', top: '266.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Grafana Dashboard</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations</div>
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
@@ -315,44 +353,44 @@ const App = () => (
 									<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" className="app--side-nav__header-title__icon">
 										<path d="M15 20H17V24H15zM20 18H22V24H20zM10 14H12V24H10z"></path>
 										<path d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"></path>
-									</svg>reports
+									</svg>DASHBOARDS
 								</div>
 							</div>
+							<hr style={{ color: 'aliceblue', width: '87%' }} />
 							<SideNavItems className="app--side-nav__sections-container">
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
-								<SideNavMenu className="app--side-nav__menu-item-btn" title="Dundas">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="operDash"
-										onMouseOver={() => openQuickView("app-hoverPanel")}
-										onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
-										<span className="app--side-nav__item-title">E2E Operational Dashboard</span>
-									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
-										onMouseOver={() => openQuickView("app-hoverPanelAd")}>
-										<span className="app--side-nav__item-title">HRM Performance</span>
-									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="newsDash"
-										onMouseOver={() => openQuickView("app-hoverPanelNews")}>
-										<span className="app--side-nav__item-title">Newsletter Subscriptions</span>
-									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dqaDash"
-										onMouseOver={() => openQuickView("app-hoverPanelDataQ")}>
-										<span className="app--side-nav__item-title">Data Quality Audit</span>
-									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dfDash"
-										onMouseOver={() => openQuickView("app-hoverPanelDataF")}>
-										<span className="app--side-nav__item-title">Data Funnel Dashboard</span>
-									</SideNavMenuItem>
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dsDash"
-										onMouseOver={() => openQuickView("app-hoverPanelDataS")}>
-										<span className="app--side-nav__item-title">E2E Data Story</span>
-									</SideNavMenuItem>
-								</SideNavMenu>
-								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>GRAFANA</p>
-								<SideNavMenu className="app--side-nav__menu-item-btn" title="Coming Soon">
-									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDash">
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="operDash"
+									onMouseOver={() => openQuickView("app-hoverPanel")}
+									onClick={() => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')}>
+									E2E Operational Dashboard
+								</SideNavLink>
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dqaDash"
+									onMouseOver={() => openQuickView("app-hoverPanelDataQ")}>
+									Data Quality Audit
+								</SideNavLink>
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dfDash"
+									onMouseOver={() => openQuickView("app-hoverPanelDataF")}>
+									Data Funnel Dashboard
+								</SideNavLink>
+								<SideNavMenu id="grafDashMenuId" title="Grafana">
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDash"
+										onMouseOver={() => openQuickView("app-hoverPanelGrafana")}>
 										<span className="app--side-nav__item-title">Grafana Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
+								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>PLATFORM METRICS (STATS)</p>
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
+									onMouseOver={() => openQuickView("app-hoverPanelAd")}>
+									HRM Performance
+								</SideNavLink>
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="newsDash"
+									onMouseOver={() => openQuickView("app-hoverPanelNews")}>
+									Newsletter Subscriptions
+								</SideNavLink>
+								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="dsDash"
+									onMouseOver={() => openQuickView("app-hoverPanelDataS")}>
+									E2E Data Story
+								</SideNavLink>
 							</SideNavItems>
 							<HoverStates />
 						</SideNav>
@@ -364,6 +402,7 @@ const App = () => (
 					<QuickViewDQ />
 					<QuickViewDF />
 					<QuickViewDS />
+					<QuickViewGrafana />
 					<Iframe />
 				</>
 			)}
@@ -390,12 +429,21 @@ function clearAllNavSelections() {
 	document.getElementById("operDash").className = "bx--side-nav__link";
 	document.getElementById("addiDash").className = "bx--side-nav__link";
 	document.getElementById("newsDash").className = "bx--side-nav__link";
+	document.getElementById("dqaDash").className = "bx--side-nav__link";
+	document.getElementById("dfDash").className = "bx--side-nav__link";
+	document.getElementById("grafDash").className = "bx--side-nav__link";
+	document.getElementById("dsDash").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
 	var timeoutId = null;
 	closeAllQuickView();
 	if (hoverStates()) {
+		if (sideNavSubMenuStates()) {
+			setReSetTopValuesForPlatformMetricsHighlights(32);
+		} else {
+			setReSetTopValuesForPlatformMetricsHighlights(0);
+		}
 		document.getElementById(id).style.display = "block";
 		timeoutId = setTimeout(closeAllQuickView, 5000);
 		while (timeoutId--) {
@@ -411,10 +459,22 @@ function closeAllQuickView() {
 	document.getElementById("app-hoverPanelDataQ").style.display = "none";
 	document.getElementById("app-hoverPanelDataF").style.display = "none";
 	document.getElementById("app-hoverPanelDataS").style.display = "none";
+	document.getElementById("app-hoverPanelGrafana").style.display = "none";
 }
 
 function hoverStates() {
 	return document.getElementById("hover-toggle").checked;
+}
+
+function sideNavSubMenuStates() {
+	var expandedValue = document.getElementsByClassName("bx--side-nav__submenu")[0].getAttribute("aria-expanded");
+	return (expandedValue == "true") ? true : false;
+}
+
+function setReSetTopValuesForPlatformMetricsHighlights(resetValue) {
+	document.getElementById("app-hoverPanelAd").style.top = 305.8 + resetValue + "px";
+	document.getElementById("app-hoverPanelNews").style.top = 337.8 + resetValue + "px";
+	document.getElementById("app-hoverPanelDataS").style.top = 369.8 + resetValue + "px";
 }
 
 export default App;

@@ -56,7 +56,7 @@
 	height: 28px;
 	min-height: 28px;
 	margin-left: 1rem;
-	background: url() no-repeat 0 -274px/cover;
+	/* background: url() no-repeat 0 -274px/cover; */
 	border: none;
 	text-indent: -9999px;
 	cursor: pointer;
@@ -388,7 +388,7 @@ opacity:1
 }
 
 .app-toggle.app-toggle--on label::before {
-	background: #fff url() no-repeat 2px -1174px;
+	/* background: #fff url() no-repeat 2px -1174px; */
 	right: 1px
 }
 
@@ -1374,7 +1374,7 @@ opacity:1
 	height: 12px;
 	border: none;
 	text-indent: -9999px;
-	background: url() no-repeat -10px -322px;
+	/* background: url() no-repeat -10px -322px; */
 	cursor: pointer;
 	filter: grayscale(100%) brightness(5)
 }
@@ -5435,7 +5435,7 @@ main>.app-alerts .app-alerts__content {
 	width: 20px;
 	height: 20px;
 	padding: 0;
-	background: transparent url() no-repeat 0 -712px/cover;
+	/* background: transparent url() no-repeat 0 -712px/cover; */
 	filter: grayscale(100%) brightness(1)
 }
 
@@ -7659,7 +7659,7 @@ to {
 	width: 8.75rem;
 	display: block;
 	padding-left: calc(2rem + 9px);
-	background-image: url();
+	/* background-image: url(); */
 	background-repeat: no-repeat;
 	background-position: 1rem -1209px;
 	cursor: pointer;

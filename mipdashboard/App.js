@@ -291,6 +291,42 @@ const StoryContent = () => {
     style: {
       color: 'aliceblue'
     }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--row",
+    style: {
+      marginLeft: "1rem"
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-hoverPanel__img-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: comingsoon,
+    alt: "Report Preview Image",
+    style: {
+      width: '7rem',
+      height: '7rem'
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    style: {
+      fontWeight: "800",
+      marginBottom: "30px",
+      fontSize: "20px"
+    }
+  }, "Grafana Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "bx--col-lg-11",
+    style: {
+      fontStyle: 'italic'
+    }
+  }, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations.")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue'
+    }
   })))));
 
   return /*#__PURE__*/_react.default.createElement(_UIShell.Content, {
@@ -307,7 +343,7 @@ const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '153.8px'
+    top: '138.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -349,7 +385,7 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '186.8px'
+    top: '305.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -390,7 +426,7 @@ const QuickViewND = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '215.8px'
+    top: '337.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -431,7 +467,7 @@ const QuickViewDQ = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '247.8px'
+    top: '170.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -472,7 +508,7 @@ const QuickViewDF = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '279.8px'
+    top: '202.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -513,7 +549,7 @@ const QuickViewDS = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel",
   style: {
     display: 'none',
-    top: '311.8px'
+    top: '369.8px'
   }
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
@@ -534,6 +570,47 @@ const QuickViewDS = () => /*#__PURE__*/_react.default.createElement("div", {
 }))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
 }, "High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewGrafana = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelGrafana",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '266.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Grafana Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: comingsoon,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations")), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row",
   style: {
     float: 'right',
@@ -655,17 +732,19 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     d: "M15 20H17V24H15zM20 18H22V24H20zM10 14H12V24H10z"
   }), /*#__PURE__*/_react.default.createElement("path", {
     d: "M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"
-  })), "reports")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavItems, {
+  })), "DASHBOARDS")), /*#__PURE__*/_react.default.createElement("hr", {
+    style: {
+      color: 'aliceblue',
+      width: '87%'
+    }
+  }), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavItems, {
     className: "app--side-nav__sections-container"
   }, /*#__PURE__*/_react.default.createElement("p", {
     style: {
       fontSize: '1.2rem',
       marginTop: '10px'
     }
-  }, "MONITORING"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
-    className: "app--side-nav__menu-item-btn",
-    title: "Dundas"
-  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "MONITORING"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
@@ -673,70 +752,59 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     id: "operDash",
     onMouseOver: () => openQuickView("app-hoverPanel"),
     onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "E2E Operational Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    className: "app--side-nav__menu-item",
-    style: {
-      cursor: 'pointer'
-    },
-    id: "addiDash",
-    onMouseOver: () => openQuickView("app-hoverPanelAd")
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "HRM Performance")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    className: "app--side-nav__menu-item",
-    style: {
-      cursor: 'pointer'
-    },
-    id: "newsDash",
-    onMouseOver: () => openQuickView("app-hoverPanelNews")
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "Newsletter Subscriptions")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "E2E Operational Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
     },
     id: "dqaDash",
     onMouseOver: () => openQuickView("app-hoverPanelDataQ")
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "Data Quality Audit")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "Data Quality Audit"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
     },
     id: "dfDash",
     onMouseOver: () => openQuickView("app-hoverPanelDataF")
+  }, "Data Funnel Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
+    id: "grafDashMenuId",
+    title: "Grafana"
+  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "grafDash",
+    onMouseOver: () => openQuickView("app-hoverPanelGrafana")
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Data Funnel Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+  }, "Grafana Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      fontSize: '1.2rem',
+      marginTop: '10px'
+    }
+  }, "PLATFORM METRICS (STATS)"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "addiDash",
+    onMouseOver: () => openQuickView("app-hoverPanelAd")
+  }, "HRM Performance"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "newsDash",
+    onMouseOver: () => openQuickView("app-hoverPanelNews")
+  }, "Newsletter Subscriptions"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
     },
     id: "dsDash",
     onMouseOver: () => openQuickView("app-hoverPanelDataS")
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "E2E Data Story"))), /*#__PURE__*/_react.default.createElement("p", {
-    style: {
-      fontSize: '1.2rem',
-      marginTop: '10px'
-    }
-  }, "GRAFANA"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenu, {
-    className: "app--side-nav__menu-item-btn",
-    title: "Coming Soon"
-  }, /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
-    className: "app--side-nav__menu-item",
-    style: {
-      cursor: 'pointer'
-    },
-    id: "grafDash"
-  }, /*#__PURE__*/_react.default.createElement("span", {
-    className: "app--side-nav__item-title"
-  }, "Grafana Dashboard")))), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
+  }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
 function loadDashboard(id, url) {
@@ -758,6 +826,10 @@ function clearAllNavSelections() {
   document.getElementById("operDash").className = "bx--side-nav__link";
   document.getElementById("addiDash").className = "bx--side-nav__link";
   document.getElementById("newsDash").className = "bx--side-nav__link";
+  document.getElementById("dqaDash").className = "bx--side-nav__link";
+  document.getElementById("dfDash").className = "bx--side-nav__link";
+  document.getElementById("grafDash").className = "bx--side-nav__link";
+  document.getElementById("dsDash").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
@@ -765,6 +837,12 @@ function openQuickView(id) {
   closeAllQuickView();
 
   if (hoverStates()) {
+    if (sideNavSubMenuStates()) {
+      setReSetTopValuesForPlatformMetricsHighlights(32);
+    } else {
+      setReSetTopValuesForPlatformMetricsHighlights(0);
+    }
+
     document.getElementById(id).style.display = "block";
     timeoutId = setTimeout(closeAllQuickView, 5000);
 
@@ -781,10 +859,22 @@ function closeAllQuickView() {
   document.getElementById("app-hoverPanelDataQ").style.display = "none";
   document.getElementById("app-hoverPanelDataF").style.display = "none";
   document.getElementById("app-hoverPanelDataS").style.display = "none";
+  document.getElementById("app-hoverPanelGrafana").style.display = "none";
 }
 
 function hoverStates() {
   return document.getElementById("hover-toggle").checked;
+}
+
+function sideNavSubMenuStates() {
+  var expandedValue = document.getElementsByClassName("bx--side-nav__submenu")[0].getAttribute("aria-expanded");
+  return expandedValue == "true" ? true : false;
+}
+
+function setReSetTopValuesForPlatformMetricsHighlights(resetValue) {
+  document.getElementById("app-hoverPanelAd").style.top = 305.8 + resetValue + "px";
+  document.getElementById("app-hoverPanelNews").style.top = 337.8 + resetValue + "px";
+  document.getElementById("app-hoverPanelDataS").style.top = 369.8 + resetValue + "px";
 }
 
 var _default = App;
