@@ -1,8 +1,0 @@
-{
-  "clientId": "7badb411-55ac-4d1b-aef8-e1d92639f645",
-  "tenantId": "43eae222-f628-42f1-9e47-ab078ac31246",
-  "secret": "Mjk5MzIxOTYtYTMxNS00NjE3LWFjZWItMzkzYjUyOTgzYTE5",
-  "oAuthServerUrl": "https://us-south.appid.cloud.ibm.com/oauth/v4/43eae222-f628-42f1-9e47-ab078ac31246",
-  "profilesUrl": "https://us-south.appid.cloud.ibm.com",
-  "redirectUri": "https://airflow.map-mktsys-dev.limited-use.ibm.com/mipdashboard/ibm/cloud/appid/callback"
-}

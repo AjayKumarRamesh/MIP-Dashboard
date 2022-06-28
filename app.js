@@ -137,12 +137,11 @@ function getAppIDConfig() {
 
 	try {
 		// if running locally we'll have the local config file
-		//config = require('./localdev-config_local.json');
-		config = require('./dev-config.json');
-		/*if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
+		// config = require('./localdev-config_local.json');
+		if (process.env.APPID_SERVICE_BINDING) { // if running on Kubernetes this env variable would be defined
 			config = JSON.parse(process.env.APPID_SERVICE_BINDING);
 			//config.redirectUri = process.env.redirectUri;
-		}*/
+		}
 	} catch (e) {
 		throw e;
 	}
