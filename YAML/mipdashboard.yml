@@ -11,13 +11,13 @@ type: kubernetes.io/dockerconfigjson
 apiVersion: 'kubernetes-client.io/v1'
 kind: ExternalSecret
 metadata:
-  name: mip-dashboard-dev-config-secret
+  name: mip-dashboard-dev-appid-config-secret
   namespace: mipdashboard
 spec:
   backendType: ibmcloudSecretsManager
   keyByName: true 
   data:
-    - key: MIP_DASHBOARD_DEV_CONFIG
+    - key: MIP_DASHBOARD_DEV_APPID_CONFIG
       property: payload
       name: APPID_SERVICE_BINDING
       secretType: kv
@@ -49,7 +49,7 @@ spec:
             - containerPort: 8080
           envFrom:
             - secretRef:
-                name: mip-dashboard-dev-config-secret
+                name: mip-dashboard-dev-appid-config-secret
       imagePullSecrets:
         - name: default-us-icr-io
         
