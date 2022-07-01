@@ -578,7 +578,7 @@ const QuickViewGrafana = () => /*#__PURE__*/_react.default.createElement("div", 
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-lg-16"
-}, /*#__PURE__*/_react.default.createElement("h2", null, "Grafana Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+}, /*#__PURE__*/_react.default.createElement("h2", null, "MIP System Status"))), /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--row"
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-4"
@@ -601,7 +601,134 @@ const QuickViewGrafana = () => /*#__PURE__*/_react.default.createElement("div", 
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
-  className: "app-button app-button--primary app-button--regular app-error__button"
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewGrafanaKub = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelGrafanaKub",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '298.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Kubernetes Cluster Resources"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: comingsoon,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewGrafanaAir = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelGrafanaAir",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '330.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "Airflow Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: comingsoon,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-button__inner"
+}, /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-button__label"
+}, "View report"))))));
+
+const QuickViewGrafanaDb = () => /*#__PURE__*/_react.default.createElement("div", {
+  id: "app-hoverPanelGrafanaDb",
+  className: "app-hoverPanel",
+  style: {
+    display: 'none',
+    top: '362.8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-lg-16"
+}, /*#__PURE__*/_react.default.createElement("h2", null, "DB2 Dashboard"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-hoverPanel__img-wrapper"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: comingsoon,
+  alt: "Report Preview Image",
+  style: {
+    height: '12rem'
+  }
+}))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-4"
+}, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations")), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    float: 'right',
+    marginTop: '3rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-md-8"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -614,7 +741,7 @@ const Overlay = () => /*#__PURE__*/_react.default.createElement("div", {
     marginLeft: '19rem'
   },
   onClick: () => closeSideNaOverlay()
-}, /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null));
+}, /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafanaKub, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafanaAir, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafanaDb, null));
 
 const Iframe = () => /*#__PURE__*/_react.default.createElement("iframe", {
   id: "i_frame",
@@ -725,7 +852,9 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
   })), "DASHBOARDS")), /*#__PURE__*/_react.default.createElement("hr", {
     style: {
       color: 'aliceblue',
-      width: '87%'
+      width: '87%',
+      maxWidth: '239px',
+      marginLeft: '18px'
     }
   }), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavItems, {
     className: "app--side-nav__sections-container"
@@ -765,15 +894,46 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "grafDash",
-    onMouseOver: () => openQuickView("app-hoverPanelGrafana")
+    onMouseOver: () => openQuickView("app-hoverPanelGrafana"),
+    onClick: () => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "app--side-nav__item-title"
-  }, "Grafana Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
+  }, "MIP System Status")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "grafDashKub",
+    onMouseOver: () => openQuickView("app-hoverPanelGrafanaKub"),
+    onClick: () => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Kubernetes Cluster Resources")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "grafDashAir",
+    onMouseOver: () => openQuickView("app-hoverPanelGrafanaAir"),
+    onClick: () => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "Airflow Dashboard")), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavMenuItem, {
+    className: "app--side-nav__menu-item",
+    style: {
+      cursor: 'pointer'
+    },
+    id: "grafDashDb",
+    onMouseOver: () => openQuickView("app-hoverPanelGrafanaDb"),
+    onClick: () => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "app--side-nav__item-title"
+  }, "DB2 Dashboard"))), /*#__PURE__*/_react.default.createElement("p", {
     style: {
       fontSize: '1.2rem',
       marginTop: '10px'
     }
-  }, "PLATFORM METRICS (STATS)"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
+  }, "PLATFORM METRICS"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
@@ -825,6 +985,9 @@ function clearAllNavSelections() {
   document.getElementById("dfDash").className = "bx--side-nav__link";
   document.getElementById("grafDash").className = "bx--side-nav__link";
   document.getElementById("dsDash").className = "bx--side-nav__link";
+  document.getElementById("grafDashKub").className = "bx--side-nav__link";
+  document.getElementById("grafDashAir").className = "bx--side-nav__link";
+  document.getElementById("grafDashDb").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
@@ -833,7 +996,7 @@ function openQuickView(id) {
 
   if (hoverStates()) {
     if (sideNavSubMenuStates()) {
-      setReSetTopValuesForPlatformMetricsHighlights(32);
+      setReSetTopValuesForPlatformMetricsHighlights(127);
     } else {
       setReSetTopValuesForPlatformMetricsHighlights(0);
     }
@@ -855,6 +1018,9 @@ function closeAllQuickView() {
   document.getElementById("app-hoverPanelDataF").style.display = "none";
   document.getElementById("app-hoverPanelDataS").style.display = "none";
   document.getElementById("app-hoverPanelGrafana").style.display = "none";
+  document.getElementById("app-hoverPanelGrafanaKub").style.display = "none";
+  document.getElementById("app-hoverPanelGrafanaAir").style.display = "none";
+  document.getElementById("app-hoverPanelGrafanaDb").style.display = "none";
 }
 
 function hoverStates() {

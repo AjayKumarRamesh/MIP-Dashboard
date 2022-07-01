@@ -319,7 +319,7 @@ const QuickViewDS = () => (
 const QuickViewGrafana = () => (
 	<div id="app-hoverPanelGrafana" className="app-hoverPanel" style={{ display: 'none', top: '266.8px' }}>
 		<div className="bx--row">
-			<div className="bx--col-lg-16"><h2>Grafana Dashboard</h2></div>
+			<div className="bx--col-lg-16"><h2>MIP System Status</h2></div>
 		</div>
 		<div className="bx--row">
 			<div className="bx--col-md-4">
@@ -331,7 +331,76 @@ const QuickViewGrafana = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewGrafanaKub = () => (
+	<div id="app-hoverPanelGrafanaKub" className="app-hoverPanel" style={{ display: 'none', top: '298.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Kubernetes Cluster Resources</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewGrafanaAir = () => (
+	<div id="app-hoverPanelGrafanaAir" className="app-hoverPanel" style={{ display: 'none', top: '330.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>Airflow Dashboard</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)}>
+					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+);
+
+const QuickViewGrafanaDb = () => (
+	<div id="app-hoverPanelGrafanaDb" className="app-hoverPanel" style={{ display: 'none', top: '362.8px' }}>
+		<div className="bx--row">
+			<div className="bx--col-lg-16"><h2>DB2 Dashboard</h2></div>
+		</div>
+		<div className="bx--row">
+			<div className="bx--col-md-4">
+				<div className="app-hoverPanel__img-wrapper">
+					<img src={comingsoon} alt="Report Preview Image" style={{ height: '12rem' }} />
+				</div>
+			</div>
+			<div className="bx--col-md-4">Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations</div>
+		</div>
+		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
+			<div className="bx--col-md-8">
+				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)}>
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -348,6 +417,9 @@ const Overlay = () => (
 		<QuickViewDF />
 		<QuickViewDS />
 		<QuickViewGrafana />
+		<QuickViewGrafanaKub />
+		<QuickViewGrafanaAir />
+		<QuickViewGrafanaDb />
 	</div>
 );
 
@@ -400,7 +472,7 @@ const App = () => (
 									</svg>DASHBOARDS
 								</div>
 							</div>
-							<hr style={{ color: 'aliceblue', width: '87%' }} />
+							<hr style={{ color: 'aliceblue', width: '87%', maxWidth: '239px', marginLeft: '18px' }} />
 							<SideNavItems className="app--side-nav__sections-container">
 								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>MONITORING</p>
 								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="operDash"
@@ -418,11 +490,27 @@ const App = () => (
 								</SideNavLink>
 								<SideNavMenu id="grafDashMenuId" title="Grafana">
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDash"
-										onMouseOver={() => openQuickView("app-hoverPanelGrafana")}>
-										<span className="app--side-nav__item-title">Grafana Dashboard</span>
+										onMouseOver={() => openQuickView("app-hoverPanelGrafana")}
+										onClick={() => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)}>
+										<span className="app--side-nav__item-title">MIP System Status</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashKub"
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaKub")}
+										onClick={() => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)}>
+										<span className="app--side-nav__item-title">Kubernetes Cluster Resources</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashAir"
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaAir")}
+										onClick={() => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)}>
+										<span className="app--side-nav__item-title">Airflow Dashboard</span>
+									</SideNavMenuItem>
+									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashDb"
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaDb")}
+										onClick={() => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)}>
+										<span className="app--side-nav__item-title">DB2 Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
-								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>PLATFORM METRICS (STATS)</p>
+								<p style={{ fontSize: '1.2rem', marginTop: '10px' }}>PLATFORM METRICS</p>
 								<SideNavLink className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="addiDash"
 									onMouseOver={() => openQuickView("app-hoverPanelAd")}
 									onClick={() => loadDashboard('addiDash', 'https://ibm.biz/HRM_Performance', true)}>
@@ -474,6 +562,9 @@ function clearAllNavSelections() {
 	document.getElementById("dfDash").className = "bx--side-nav__link";
 	document.getElementById("grafDash").className = "bx--side-nav__link";
 	document.getElementById("dsDash").className = "bx--side-nav__link";
+	document.getElementById("grafDashKub").className = "bx--side-nav__link";
+	document.getElementById("grafDashAir").className = "bx--side-nav__link";
+	document.getElementById("grafDashDb").className = "bx--side-nav__link";
 }
 
 function openQuickView(id) {
@@ -481,7 +572,7 @@ function openQuickView(id) {
 	closeAllQuickView();
 	if (hoverStates()) {
 		if (sideNavSubMenuStates()) {
-			setReSetTopValuesForPlatformMetricsHighlights(32);
+			setReSetTopValuesForPlatformMetricsHighlights(127);
 		} else {
 			setReSetTopValuesForPlatformMetricsHighlights(0);
 		}
@@ -501,6 +592,9 @@ function closeAllQuickView() {
 	document.getElementById("app-hoverPanelDataF").style.display = "none";
 	document.getElementById("app-hoverPanelDataS").style.display = "none";
 	document.getElementById("app-hoverPanelGrafana").style.display = "none";
+	document.getElementById("app-hoverPanelGrafanaKub").style.display = "none";
+	document.getElementById("app-hoverPanelGrafanaAir").style.display = "none";
+	document.getElementById("app-hoverPanelGrafanaDb").style.display = "none";
 }
 
 function hoverStates() {
