@@ -339,6 +339,18 @@ const QuickViewGrafana = () => (
 	</div>
 );
 
+const Overlay = () => (
+	<div className="bx--side-nav__overlay bx--side-nav__overlay-active" style={{ marginLeft: '19rem' }} onClick={() => closeSideNaOverlay()}>
+		<QuickView />
+		<QuickViewAD />
+		<QuickViewND />
+		<QuickViewDQ />
+		<QuickViewDF />
+		<QuickViewDS />
+		<QuickViewGrafana />
+	</div>
+);
+
 const Iframe = () => (
 	<iframe id="i_frame" src="" style={{ border: '0pt none', width: '100%', height: '100%', position: 'absolute', display: 'none', paddingTop: '3rem' }} scrolling="no"></iframe>
 );
@@ -379,6 +391,7 @@ const App = () => (
 							</HeaderGlobalAction>
 						</HeaderGlobalBar>
 						<SideNav aria-label="Side navigation" className="app--side-nav app--side-nav--is-open" isFixedNav={true} expanded={isSideNavExpanded}>
+							<Overlay />
 							<div className="app--side-nav__header">
 								<div className="app--side-nav__header-title">
 									<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true" className="app--side-nav__header-title__icon">
@@ -429,13 +442,6 @@ const App = () => (
 						</SideNav>
 					</Header>
 					<StoryContent />
-					<QuickView />
-					<QuickViewAD />
-					<QuickViewND />
-					<QuickViewDQ />
-					<QuickViewDF />
-					<QuickViewDS />
-					<QuickViewGrafana />
 					<Iframe />
 				</>
 			)}
@@ -450,7 +456,7 @@ function loadDashboard(id, url, flag) {
 	clearAllNavSelections();
 	document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
 	if (flag) {
-		document.getElementsByClassName("bx--header__menu-toggle")[0].click();
+		closeSideNaOverlay();
 	}
 }
 
@@ -510,6 +516,11 @@ function setReSetTopValuesForPlatformMetricsHighlights(resetValue) {
 	document.getElementById("app-hoverPanelAd").style.top = 305.8 + resetValue + "px";
 	document.getElementById("app-hoverPanelNews").style.top = 337.8 + resetValue + "px";
 	document.getElementById("app-hoverPanelDataS").style.top = 369.8 + resetValue + "px";
+}
+
+function closeSideNaOverlay() {
+	closeAllQuickView();
+	document.getElementsByClassName("bx--header__menu-toggle")[0].click();
 }
 
 export default App;
