@@ -45,6 +45,15 @@ const newsletterImage = {
   aspectRatio: 1.337,
   heightToWidthRatio: 0.748
 };
+const hrmperfImage = {
+  pathname: "\\src\\views\\hrmperfdash.png",
+  src: "\\src\\views\\hrmperfdash.png",
+  type: "png",
+  width: 999,
+  height: 720,
+  aspectRatio: 1.387,
+  heightToWidthRatio: 0.721
+};
 const comingsoon = {
   pathname: "\\src\\views\\comingsoon.jpg",
   src: "\\src\\views\\comingsoon.jpg",
@@ -59,284 +68,240 @@ const StoryContent = () => {
   const content = /*#__PURE__*/_react.default.createElement("div", {
     id: "divId",
     className: "bx--grid"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row"
-  }, /*#__PURE__*/_react.default.createElement("section", {
-    style: {
-      marginLeft: "1.5%",
-      padding: "2rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      lineHeight: "30px",
-      display: 'flex'
-    }
-  }, /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: operationalImage,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "E2E Operational Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Provides Insight into the real time status of ETL processes and data flowing through MIP including the Upstream & Downstream systems.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: newsletterImage,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "Newsletter Subscriptions")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Gives visibility into the Subscriptions counts for each Newsletter to assess Permission vs Suppressions for IBMers & non-IBMers.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "HRM Performance Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Visual representation of the performance of HRMs flowing through MIP including overall counts and average processing times.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "Data Quality Audit")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Gain insight into the volume of data flowing through each system and provide indicators / flags for any data quality issues identified.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "Data Funnel Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "provides visibility into volume of data flowing through each system & provides users a tool to identify any gaps or issues with data processing.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "High level overview of the variety & volume of data being processed by MIP and help users better understand the scope of MIP.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--row",
-    style: {
-      marginLeft: "1rem"
-    }
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-1"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-hoverPanel__img-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: comingsoon,
-    alt: "Report Preview Image",
-    style: {
-      width: '7rem',
-      height: '7rem'
-    }
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, /*#__PURE__*/_react.default.createElement("h2", {
-    style: {
-      fontWeight: "800",
-      marginBottom: "30px",
-      fontSize: "20px"
-    }
-  }, "Grafana Dashboard")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "bx--col-lg-11",
-    style: {
-      fontStyle: 'italic'
-    }
-  }, "Enables to query, visualize, alert on, explore metrics, logs and Provides tools to turn time-series data into insightful graphs and visualizations.")), /*#__PURE__*/_react.default.createElement("hr", {
-    style: {
-      color: 'aliceblue'
-    }
-  })))));
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(FrequentUsed, null)), /*#__PURE__*/_react.default.createElement(AdditionalResource, null), /*#__PURE__*/_react.default.createElement(Footer, null));
 
   return /*#__PURE__*/_react.default.createElement(_UIShell.Content, {
     id: "main-content",
     style: {
-      backgroundColor: 'lightgray',
-      padding: '0rem'
+      padding: '1rem'
     }
   }, content);
 };
+
+const FrequentUsed = () => /*#__PURE__*/_react.default.createElement("section", {
+  className: "app-frequentlyUsedReports bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-xlg-12"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    paddingLeft: '2rem',
+    marginBottom: '8px'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-xlg-6"
+}, /*#__PURE__*/_react.default.createElement("h2", {
+  className: "app-frequentlyUsedReports__header"
+}, "Spotlight"))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row",
+  style: {
+    paddingLeft: '2rem',
+    paddingRight: '2.2rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-frequentlyUsedReports__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "bx--link bx--tile bx--tile--clickable app-frequentlyUsedReport__item-tile",
+  onClick: () => loadDashboard('addiDash', 'https://ibm.biz/HRM_Performance', false)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-img-wrap"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: hrmperfImage,
+  className: "app-frequentlyUsedReports__item-img",
+  alt: "",
+  "aria-hidden": "true"
+})), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-frequentlyUsedReports__item-title"
+}, "HRM Performance Dashboard")))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-frequentlyUsedReports__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "bx--link bx--tile bx--tile--clickable app-frequentlyUsedReport__item-tile",
+  onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring', false)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-img-wrap"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: operationalImage,
+  className: "app-frequentlyUsedReports__item-img",
+  alt: "",
+  "aria-hidden": "true"
+})), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-frequentlyUsedReports__item-title"
+}, "E2E Operational Dashboard")))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-frequentlyUsedReports__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "bx--link bx--tile bx--tile--clickable app-frequentlyUsedReport__item-tile",
+  onClick: () => loadDashboard('newsDash', 'https://ibm.biz/NewsletterSubs', false)
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-img-wrap"
+}, /*#__PURE__*/_react.default.createElement("img", {
+  src: newsletterImage,
+  className: "app-frequentlyUsedReports__item-img",
+  alt: "",
+  "aria-hidden": "true"
+})), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-frequentlyUsedReports__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-frequentlyUsedReports__item-title"
+}, "Newsletter Subscriptions Dashboard")))))));
+
+const AdditionalResource = () => /*#__PURE__*/_react.default.createElement("section", {
+  className: "app-assetList bx--row app-assetList--light",
+  style: {
+    paddingLeft: '3rem',
+    marginLeft: '-0.8rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-xlg-12"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-xlg-6"
+}, /*#__PURE__*/_react.default.createElement("h2", {
+  className: "app-assetList__header"
+}, "Additional Resources"))), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-assetList__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  href: "https://w3.ibm.com/w3publisher/marketing-automation-platform",
+  target: "_blank",
+  className: "bx--link bx--tile bx--tile--clickable"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-tag"
+}, /*#__PURE__*/_react.default.createElement("svg", {
+  id: "Layer_1",
+  "data-name": "Layer 1",
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 122.88 119.86"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M20.72,72a3,3,0,0,1-2.84-3.1,3,3,0,0,1,2.84-3.1H57.47a3,3,0,0,1,2.84,3.1A3,3,0,0,1,57.47,72ZM83.08,95.75c-1-1.53-2.77-3.62-2.77-5.42a2.92,2.92,0,0,1,1.94-2.64c-.09-1.51-.15-3.06-.15-4.59,0-.9,0-1.82.05-2.72A6.52,6.52,0,0,1,82.46,79a9.7,9.7,0,0,1,4.32-5.48,12.28,12.28,0,0,1,2.34-1.12c1.48-.54.76-2.88,2.39-2.91,3.79-.1,10,3.22,12.47,5.86a8.84,8.84,0,0,1,2.49,5.93L106.32,88a2.17,2.17,0,0,1,1.59,1.37c.52,2.1-1.66,4.71-2.67,6.38s-4.5,5.74-4.51,5.78a1.39,1.39,0,0,0,.32.77c5.54,7.62,21.83,1.74,21.83,16.89H65.33c0-15.16,16.29-9.27,21.82-16.89a1.68,1.68,0,0,0,.4-.79c0-.1-4.1-5.12-4.47-5.71Zm8-76.89h10.18A7.16,7.16,0,0,1,106.39,21a7.26,7.26,0,0,1,2.13,5.13V61.9l-6.27-2.46V26.13a1,1,0,0,0-1-1H91V57.88l-6.24,2.46V7.27a1,1,0,0,0-1-1H7.24a1,1,0,0,0-1,1V93.72a1,1,0,0,0,1,1H64.42L62,101H23.66v11.6a1,1,0,0,0,1,1H56.37l-2.46,6.24H24.73a7.31,7.31,0,0,1-7.27-7.28V101H7.27A7.31,7.31,0,0,1,0,93.72V7.27A7.16,7.16,0,0,1,2.14,2.14,7.23,7.23,0,0,1,7.27,0H83.79a7.18,7.18,0,0,1,5.14,2.14,7.27,7.27,0,0,1,2.14,5.13V18.86Zm-70.38,10a3,3,0,0,1-2.85-3.1,3,3,0,0,1,2.85-3.1H69.77a3,3,0,0,1,2.84,3.1,3,3,0,0,1-2.84,3.1Zm0,21.57a3,3,0,0,1-2.85-3.1,3,3,0,0,1,2.85-3.1H69.77a3,3,0,0,1,2.84,3.1,3,3,0,0,1-2.84,3.1Z"
+})), "MIP W3 Publisher Page"), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-assetList__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-title"
+}, "Want to know about Marketing Automation Platform?"), /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-description"
+}, "Access publisher page to know more."), /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-assetList__item-link"
+}, "Visit Page", /*#__PURE__*/_react.default.createElement("svg", {
+  focusable: "false",
+  preserveAspectRatio: "xMidYMid meet",
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "currentColor",
+  width: "20",
+  height: "20",
+  viewBox: "0 0 20 20",
+  "aria-hidden": "true"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
+})))))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-assetList__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  href: "https://app.gitbook.com/o/-MVrrE7oVdN01MNzhq3-/s/-MbCUFV_nKu1Qv9gzU04/",
+  target: "_blank",
+  className: "bx--link bx--tile bx--tile--clickable"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-tag"
+}, /*#__PURE__*/_react.default.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 103.19 122.88"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M17.16 0h82.72a3.32 3.32 0 013.31 3.31v92.32c-.15 2.58-3.48 2.64-7.08 2.48H15.94c-4.98 0-9.05 4.07-9.05 9.05s4.07 9.05 9.05 9.05h80.17v-9.63h7.08v12.24c0 2.23-1.82 4.05-4.05 4.05H16.29C7.33 122.88 0 115.55 0 106.59V17.16C0 7.72 7.72 0 17.16 0zm3.19 13.4h2.86c1.46 0 2.66.97 2.66 2.15v67.47c0 1.18-1.2 2.15-2.66 2.15h-2.86c-1.46 0-2.66-.97-2.66-2.15V15.55c.01-1.19 1.2-2.15 2.66-2.15z",
+  fillRule: "evenodd",
+  clipRule: "evenodd"
+})), "MIP Gitbook"), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-assetList__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-title"
+}, "Marketing Interaction Platform (MIP)"), /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-description"
+}, "Access Gitbook to know more."), /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-assetList__item-link"
+}, "View Gitbook", /*#__PURE__*/_react.default.createElement("svg", {
+  focusable: "false",
+  preserveAspectRatio: "xMidYMid meet",
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "currentColor",
+  width: "20",
+  height: "20",
+  viewBox: "0 0 20 20",
+  "aria-hidden": "true"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
+})))))), /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-sm-4 bx--col-md-4 bx--col-lg-4 bx--col-xlg-4 app-assetList__item"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "bx--link bx--tile bx--tile--clickable",
+  style: {
+    cursor: 'default'
+  }
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-tag"
+}, /*#__PURE__*/_react.default.createElement("svg", {
+  role: "img",
+  viewBox: "0 0 24 24",
+  xmlns: "http://www.w3.org/2000/svg"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"
+})), "Slack Channels"), /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-assetList__item-label"
+}, /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-title"
+}, "Need help or support?"), /*#__PURE__*/_react.default.createElement("p", {
+  className: "app-assetList__item-description"
+}, "Contact through Slack."), /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-assetList__item-link",
+  style: {
+    marginLeft: '2rem'
+  }
+}, "#e2e-ce-map-triage"), /*#__PURE__*/_react.default.createElement("span", {
+  className: "app-assetList__item-link",
+  style: {
+    marginLeft: '2rem'
+  }
+}, "#e2e-ce-map-support")))))));
+
+const Footer = () => /*#__PURE__*/_react.default.createElement("section", {
+  className: "app-footer"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-footer__children-container"
+}), /*#__PURE__*/_react.default.createElement("footer", {
+  className: "app-footer bx--row"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--col-xlg-12"
+}, /*#__PURE__*/_react.default.createElement("div", {
+  className: "app-footer__links"
+})), /*#__PURE__*/_react.default.createElement("a", {
+  href: "https://www.ibm.com",
+  className: "app-footer__ibm-logo",
+  "aria-labelledby": "footer-ibm-logo footer-ibm-logo-text",
+  id: "footer-ibm-logo",
+  style: {
+    marginLeft: '0rem'
+  }
+}, /*#__PURE__*/_react.default.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "82",
+  height: "32",
+  viewBox: "0 0 82 32",
+  className: "ibm-logo_svg__ibm-logo__SVG ibm-logo_svg__ds-mar-b-2",
+  focusable: "false",
+  preserveAspectRatio: "xMidYMid meet"
+}, /*#__PURE__*/_react.default.createElement("g", {
+  fill: "#231F20"
+}, /*#__PURE__*/_react.default.createElement("path", {
+  d: "M17.053 24.371h23.501c-.033.491-.483 1.831-.695 2.144H17.053v-2.144zM17.053 4.062h22.844c.196.353.641 1.688.696 2.144h-23.54V4.062zM21.29 16.247h16.302c.531.372 1.516 1.595 1.909 2.144H21.29v-2.144zM34.002 22.454h6.795c.018-.561-.203-1.714-.371-2.144h-6.424v2.144zM21.29 14.33h16.327c.531-.373 1.507-1.595 1.9-2.144H21.29v2.144zM34.002 8.124h6.769c-.002.497-.186 1.713-.353 2.144h-6.416V8.124zM17.053 28.433h21.249c-1.883 1.596-3.546 2.144-6.463 2.144H17.053v-2.144zM17.053 2.144h21.249C36.419.548 34.756 0 31.839 0H17.053v2.144zM.104 0h14.83v2.144H.104zM.104 4.062h14.83v2.144H.104zM.104 24.371h14.83v2.144H.104zM4.341 20.309h6.356v2.144H4.341zM4.341 16.247h6.356v2.144H4.341zM4.341 12.185h6.356v2.144H4.341zM4.341 8.124h6.356v2.144H4.341zM21.29 20.309h6.355v2.144H21.29zM21.29 8.124h6.355v2.144H21.29zM56.485 22.454h5.879l.746-2.145h-7.371zM55.071 18.392h8.707l.746-2.145H54.325zM.104 28.433h14.83v2.144H.104zM59.314 30.577h.221l.747-2.144h-1.715zM46.713 20.309h6.356v2.144h-6.356zM46.713 16.247h6.356v2.144h-6.356zM42.477 28.433h10.592v2.144H42.477zM42.477 24.371h10.592v2.144H42.477zM57.9 26.515h3.05l.746-2.144h-4.543zM65.781 20.309h6.355v2.144h-6.355zM65.781 16.247h6.355v2.144h-6.355zM65.78 28.433h10.594v2.144H65.78zM65.781 24.371h10.593v2.144H65.781zM57.31 8.124H46.713v2.144H58.07zM60.101 12.185l-.676 1.925-.675-1.925H46.714v2.145h6.355v-1.689l.588 1.689h11.535l.588-1.689v.012l.001-.001v1.678h6.356v-2.145zM54.434 0H42.477v2.144h12.716zM55.872 4.062H42.477v2.144h14.155zM61.539 8.124h10.598v2.144H60.779zM64.416 0h11.958v2.144H63.657zM62.977 4.062h13.397v2.144H62.218z"
+})), /*#__PURE__*/_react.default.createElement("path", {
+  fill: "#231F20",
+  d: "M78.686 28.981c0-.922.75-1.676 1.676-1.676.923 0 1.668.753 1.668 1.676 0 .931-.745 1.684-1.668 1.684a1.68 1.68 0 01-1.676-1.684zm3.08 0c0-.816-.592-1.454-1.403-1.454-.815 0-1.411.638-1.411 1.454 0 .824.596 1.462 1.411 1.462.811 0 1.403-.638 1.403-1.462zm-.57.939h-.273l-.534-.864h-.419v.864h-.23v-1.875h.816c.494 0 .662.186.662.497 0 .368-.256.505-.587.514l.565.864zm-.878-1.046c.265 0 .653.044.653-.337 0-.292-.238-.328-.468-.328h-.533v.665h.348z"
+}), /*#__PURE__*/_react.default.createElement("path", {
+  fill: "none",
+  d: "M79.452 27.3h2.588v3.374h-2.588z"
+})))));
 
 const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   id: "app-hoverPanel",
@@ -373,7 +338,7 @@ const QuickView = () => /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
   className: "app-button app-button--primary app-button--regular app-error__button",
-  onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
+  onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring', true)
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -398,7 +363,7 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-hoverPanel__img-wrapper"
 }, /*#__PURE__*/_react.default.createElement("img", {
-  src: comingsoon,
+  src: hrmperfImage,
   alt: "Report Preview Image",
   style: {
     height: '12rem'
@@ -414,7 +379,8 @@ const QuickViewAD = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
-  className: "app-button app-button--primary app-button--regular app-error__button"
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('addiDash', 'https://ibm.biz/HRM_Performance', true)
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -455,7 +421,8 @@ const QuickViewND = () => /*#__PURE__*/_react.default.createElement("div", {
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "bx--col-md-8"
 }, /*#__PURE__*/_react.default.createElement("a", {
-  className: "app-button app-button--primary app-button--regular app-error__button"
+  className: "app-button app-button--primary app-button--regular app-error__button",
+  onClick: () => loadDashboard('newsDash', 'https://ibm.biz/NewsletterSubs', true)
 }, /*#__PURE__*/_react.default.createElement("div", {
   className: "app-button__inner"
 }, /*#__PURE__*/_react.default.createElement("span", {
@@ -751,7 +718,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     },
     id: "operDash",
     onMouseOver: () => openQuickView("app-hoverPanel"),
-    onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring')
+    onClick: () => loadDashboard('operDash', 'https://ibm.biz/E2E_Monitoring', true)
   }, "E2E Operational Dashboard"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
@@ -789,14 +756,16 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
       cursor: 'pointer'
     },
     id: "addiDash",
-    onMouseOver: () => openQuickView("app-hoverPanelAd")
+    onMouseOver: () => openQuickView("app-hoverPanelAd"),
+    onClick: () => loadDashboard('addiDash', 'https://ibm.biz/HRM_Performance', true)
   }, "HRM Performance"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
       cursor: 'pointer'
     },
     id: "newsDash",
-    onMouseOver: () => openQuickView("app-hoverPanelNews")
+    onMouseOver: () => openQuickView("app-hoverPanelNews"),
+    onClick: () => loadDashboard('newsDash', 'https://ibm.biz/NewsletterSubs', true)
   }, "Newsletter Subscriptions"), /*#__PURE__*/_react.default.createElement(_UIShell.SideNavLink, {
     className: "app--side-nav__menu-item",
     style: {
@@ -807,13 +776,16 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
   }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
-function loadDashboard(id, url) {
+function loadDashboard(id, url, flag) {
   document.getElementById("i_frame").style.display = "block";
   document.getElementById("i_frame").src = url;
   hideAllContent();
   clearAllNavSelections();
   document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
-  document.getElementsByClassName("bx--header__menu-toggle")[0].click();
+
+  if (flag) {
+    document.getElementsByClassName("bx--header__menu-toggle")[0].click();
+  }
 }
 
 function hideAllContent() {

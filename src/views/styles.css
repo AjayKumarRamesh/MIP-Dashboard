@@ -6798,7 +6798,7 @@ to {
 
 .app-assetList__item-link {
 	color: #0072c3;
-	align-self: flex-end;
+	/* align-self: flex-end; */
 	margin-top: auto
 }
 

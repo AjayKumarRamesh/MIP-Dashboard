@@ -108,9 +108,13 @@ app.use('/mipdashboard', (req, res) => {
           <noscript>
             You need to enable JavaScript to run this app.
           </noscript>
-          <div id="welcomeDiv" style="margin-top: 5rem; margin-left: 5.3rem; font-size: 1rem; font-weight: 700;">
-          	Welcome, <span id="userNameSpan">${idPayload.given_name}</span> <span id="userLastNameSpan">${idPayload.family_name}</span> 
+          <div id="welcomeDiv" style="margin-top: 5rem; margin-left: 5.5rem; font-size: 1rem; font-weight: 700; line-height: 1.25; letter-spacing: 0">
+          	Welcome, <span id="userNameSpan">${idPayload.given_name}</span> <span id="userLastNameSpan">${idPayload.family_name}</span> to the MIP Dashboards Homepage.
           	<span style="visibility: hidden" id="userEmailIdSpan">${idPayload.email}</span>
+          	<br/><br/>
+          	<span style="font-style: italic; font-weight: 400;">
+          		Here you can find all the dashboards related to MIP Monitoring and the Key Platform Metrics. Find the list of dashboard in the navigation panel on the left.
+          	</span>
           </div>
           <div id="root">
           	${ReactDOMServer.renderToString(React.createElement(App))}
