@@ -593,6 +593,14 @@ const QuickViewGrafana = () => /*#__PURE__*/_react.default.createElement("div", 
   className: "app-button__label"
 }, "View report"))))));
 
+const Overlay = () => /*#__PURE__*/_react.default.createElement("div", {
+  className: "bx--side-nav__overlay bx--side-nav__overlay-active",
+  style: {
+    marginLeft: '19rem'
+  },
+  onClick: () => closeSideNaOverlay()
+}, /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null));
+
 const Iframe = () => /*#__PURE__*/_react.default.createElement("iframe", {
   id: "i_frame",
   src: "",
@@ -681,7 +689,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     className: "app--side-nav app--side-nav--is-open",
     isFixedNav: true,
     expanded: isSideNavExpanded
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(Overlay, null), /*#__PURE__*/_react.default.createElement("div", {
     className: "app--side-nav__header"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "app--side-nav__header-title"
@@ -773,7 +781,7 @@ const App = () => /*#__PURE__*/_react.default.createElement("div", {
     },
     id: "dsDash",
     onMouseOver: () => openQuickView("app-hoverPanelDataS")
-  }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(QuickView, null), /*#__PURE__*/_react.default.createElement(QuickViewAD, null), /*#__PURE__*/_react.default.createElement(QuickViewND, null), /*#__PURE__*/_react.default.createElement(QuickViewDQ, null), /*#__PURE__*/_react.default.createElement(QuickViewDF, null), /*#__PURE__*/_react.default.createElement(QuickViewDS, null), /*#__PURE__*/_react.default.createElement(QuickViewGrafana, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
+  }, "E2E Data Story")), /*#__PURE__*/_react.default.createElement(HoverStates, null))), /*#__PURE__*/_react.default.createElement(StoryContent, null), /*#__PURE__*/_react.default.createElement(Iframe, null))
 }));
 
 function loadDashboard(id, url, flag) {
@@ -784,7 +792,7 @@ function loadDashboard(id, url, flag) {
   document.getElementById(id).className = "bx--side-nav__link bx--side-nav__link--current";
 
   if (flag) {
-    document.getElementsByClassName("bx--header__menu-toggle")[0].click();
+    closeSideNaOverlay();
   }
 }
 
@@ -847,6 +855,11 @@ function setReSetTopValuesForPlatformMetricsHighlights(resetValue) {
   document.getElementById("app-hoverPanelAd").style.top = 305.8 + resetValue + "px";
   document.getElementById("app-hoverPanelNews").style.top = 337.8 + resetValue + "px";
   document.getElementById("app-hoverPanelDataS").style.top = 369.8 + resetValue + "px";
+}
+
+function closeSideNaOverlay() {
+  closeAllQuickView();
+  document.getElementsByClassName("bx--header__menu-toggle")[0].click();
 }
 
 var _default = App;
