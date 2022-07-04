@@ -331,7 +331,7 @@ const QuickViewGrafana = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -354,7 +354,7 @@ const QuickViewGrafanaKub = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -377,7 +377,7 @@ const QuickViewGrafanaAir = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -400,7 +400,7 @@ const QuickViewGrafanaDb = () => (
 		</div>
 		<div className="bx--row" style={{ float: 'right', marginTop: '3rem' }}>
 			<div className="bx--col-md-8">
-				<a className="app-button app-button--primary app-button--regular app-error__button" onClick={() => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)}>
+				<a className="app-button app-button--primary app-button--regular app-error__button">
 					<div className="app-button__inner"><span className="app-button__label">View report</span></div>
 				</a>
 			</div>
@@ -490,23 +490,19 @@ const App = () => (
 								</SideNavLink>
 								<SideNavMenu id="grafDashMenuId" title="Grafana">
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDash"
-										onMouseOver={() => openQuickView("app-hoverPanelGrafana")}
-										onClick={() => loadDashboard('grafDash', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/4jvM5mUnk/system-status-bot?orgId=1&refresh=1m', true)}>
+										onMouseOver={() => openQuickView("app-hoverPanelGrafana")}>
 										<span className="app--side-nav__item-title">MIP System Status</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashKub"
-										onMouseOver={() => openQuickView("app-hoverPanelGrafanaKub")}
-										onClick={() => loadDashboard('grafDashKub', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s', true)}>
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaKub")}>
 										<span className="app--side-nav__item-title">Kubernetes Cluster Resources</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashAir"
-										onMouseOver={() => openQuickView("app-hoverPanelGrafanaAir")}
-										onClick={() => loadDashboard('grafDashAir', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/lFXqBGxWk/airflow-cluster-dashboard?orgId=1&refresh=5s', true)}>
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaAir")}>
 										<span className="app--side-nav__item-title">Airflow Dashboard</span>
 									</SideNavMenuItem>
 									<SideNavMenuItem className="app--side-nav__menu-item" style={{ cursor: 'pointer' }} id="grafDashDb"
-										onMouseOver={() => openQuickView("app-hoverPanelGrafanaDb")}
-										onClick={() => loadDashboard('grafDashDb', 'https://airflow.map-mktsys-dev.limited-use.ibm.com/grafana/d/-0oGIvPnz/db2-log-utilization?orgId=1&refresh=1m', true)}>
+										onMouseOver={() => openQuickView("app-hoverPanelGrafanaDb")}>
 										<span className="app--side-nav__item-title">DB2 Dashboard</span>
 									</SideNavMenuItem>
 								</SideNavMenu>
