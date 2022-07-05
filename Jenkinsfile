@@ -33,7 +33,7 @@ pipeline{
             }
         }
 
-        stage ("Deploy the MIP-Dashboard to dev cluster") {
+        stage ("Deploy the MIP-Dashboard to test cluster") {
             environment {
                 IBMCLOUD_CREDS = credentials('ibm-cloud-cr')
             }
