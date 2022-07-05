@@ -5,7 +5,7 @@ pipeline{
         stage ("Github Checkout") {
             steps {
                 git credentialsId: 'sangita_id_rsa' ,
-                url: 'ssh://git@github.ibm.com/CIO-MAP/MIP-Dashboard.git', branch: 'iteration_sso_withoutpopup'
+                url: 'ssh://git@github.ibm.com/CIO-MAP/MIP-Dashboard.git', branch: 'test'
             } //steps
         }
 
@@ -25,11 +25,11 @@ pipeline{
             steps {
                 sh('ibmcloud login --apikey ${IBMCLOUD_CREDS_PSW} -r us-south')
                 sh('ibmcloud cr login')
-                sh('docker build -t us.icr.io/map-dev-namespace/mipdashboard:${BUILD_NUMBER} -f Dockerfile .')
+                sh('docker build -t us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER} -f Dockerfile .')
                 sh('docker images')
-                sh('docker push us.icr.io/map-dev-namespace/mipdashboard:${BUILD_NUMBER}')
-                sh('ibmcloud cr image-tag us.icr.io/map-dev-namespace/mipdashboard:${BUILD_NUMBER} us.icr.io/map-dev-namespace/mipdashboard:latest')
-                sh('ibmcloud cr image-list --restrict map-dev-namespace')
+                sh('docker push us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER}')
+                sh('ibmcloud cr image-tag us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER} us.icr.io/map-test-namespace/mipdashboard:latest')
+                sh('ibmcloud cr image-list --restrict map-test-namespace')
             }
         }
 
@@ -39,7 +39,7 @@ pipeline{
             }
             steps {
                 sh('ibmcloud login --apikey ${IBMCLOUD_CREDS_PSW} -r us-south')
-                sh('ibmcloud ks cluster config --cluster map-dal10-16x64-01')
+                sh('ibmcloud ks cluster config --cluster map-dal10-16x64-02')
                 sh('kubectl config current-context')
                 sh('kubectl rollout restart deployment mipdashboard -n mipdashboard')
             } //steps
