@@ -25,11 +25,11 @@ pipeline{
             steps {
                 sh('ibmcloud login --apikey ${IBMCLOUD_CREDS_PSW} -r us-south')
                 sh('ibmcloud cr login')
-                sh('docker build -t us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER} -f Dockerfile .')
+                sh('docker build -t us.icr.io/mip-test-namespace/mipdashboard:${BUILD_NUMBER} -f Dockerfile .')
                 sh('docker images')
-                sh('docker push us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER}')
-                sh('ibmcloud cr image-tag us.icr.io/map-test-namespace/mipdashboard:${BUILD_NUMBER} us.icr.io/map-test-namespace/mipdashboard:latest')
-                sh('ibmcloud cr image-list --restrict map-test-namespace')
+                sh('docker push us.icr.io/mip-test-namespace/mipdashboard:${BUILD_NUMBER}')
+                sh('ibmcloud cr image-tag us.icr.io/mip-test-namespace/mipdashboard:${BUILD_NUMBER} us.icr.io/mip-test-namespace/mipdashboard:latest')
+                sh('ibmcloud cr image-list --restrict mip-test-namespace')
             }
         }
 
