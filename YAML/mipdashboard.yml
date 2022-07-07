@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
         - name: mipdashboard
-          image: us.icr.io/map-test-namespace/mipdashboard:latest
+          image: us.icr.io/mip-test-namespace/mipdashboard:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
