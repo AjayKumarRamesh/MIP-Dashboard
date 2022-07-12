@@ -6,6 +6,7 @@
 ### Pre-requisites 
     Install IBM Cloud CLI
 
+
 ### Install plugins and list them
     ibmcloud plugin install container-service
     ibmcloud plugin install container-registry
@@ -14,6 +15,31 @@
     ibmcloud plugin list
 
 ### Install podman
+
+### Build the Image and Push into Container Registry
+* Login IBM Cloud
+    ~~~
+        $ $ ibmcloud login -r us-south --sso
+                        or
+        Download apikey.json from clod console
+        $ ibmcloud login -r us-south --apikey @apikey.json
+    ~~~
+* Login container Registry
+    ~~~
+        $ ibmcloud cr login 
+    ~~~
+* Build the Docker Image
+    ~~~
+        $ podman build -t us.icr.io/mip-prod-namespace/mipdashboard:${BUILD_NUMBER} -f Dockerfile .
+    ~~~
+* Push the Docker Image into Dev Registry
+    ~~~
+        $ podman push us.icr.io/mip-prod-namespace/mipdashboard:${BUILD_NUMBER}
+    ~~~
+* change the tag name from build number to latest
+    ~~~
+        ibmcloud cr image-tag us.icr.io/mip-prod-namespace/mipdashboard:${BUILD_NUMBER} us.icr.io/mip-prod-namespace/mipdashboard:latest
+    ~~~
 
 ### Login to IBM
     $ ibmcloud login -r us-south --sso
